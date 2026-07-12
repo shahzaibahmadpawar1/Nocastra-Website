@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
 import Counter from "@/src/components/Counter";
+import ScrollRevealText from "@/src/components/ScrollRevealText";
 import ParticlesBanner from "@/src/components/ParticlesBanner";
 import { ShieldCheck, Check, Server, Terminal, Cloud, ShieldAlert, Users, Award, Lock, ArrowRight } from "lucide-react";
 
@@ -202,6 +203,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+const splitMetric = (metricStr: string) => {
+  const match = metricStr.match(/^([<>\s]*\d+[\d\.\%\+\-\/xs]*|Zero|End-to-End)/);
+  if (!match) return { numberPart: metricStr, textPart: "" };
+  const numberPart = match[0].trim();
+  const textPart = metricStr.substring(match[0].length).trim();
+  return { numberPart, textPart };
+};
+
 export default async function ITManagementPage({ params }: Props) {
   const { slug } = await params;
   const service = itManagementServices[slug as keyof typeof itManagementServices];
@@ -337,6 +346,8 @@ export default async function ITManagementPage({ params }: Props) {
                   {service.ctaText} <ArrowRight size={18} />
                 </Link>
               </div>
+
+              <ScrollRevealText text="At Nocastra, we commit to absolute operational safety. Our cloud architectures, automated compliance checks, and proactive system hardening configurations are built with a single focus: keeping your infrastructure resilient, high-performing, and completely secure against any threat." />
             </div>
 
             {/* Right side layout */}
@@ -370,9 +381,23 @@ export default async function ITManagementPage({ params }: Props) {
                 boxShadow: "var(--shadow-lg)"
               }}>
                 <h3 style={{ fontSize: "1.15rem", textTransform: "uppercase", letterSpacing: "1px", color: "var(--text-muted)", marginBottom: "16px" }}>Performance Metric</h3>
-                <div style={{ fontSize: "2.5rem", fontWeight: 800, color: "var(--primary)", letterSpacing: "-1px", marginBottom: "8px", fontFamily: "var(--font-headings)" }}>
-                  <Counter value={service.metric} />
-                </div>
+                
+                {(() => {
+                  const { numberPart, textPart } = splitMetric(service.metric);
+                  return (
+                    <>
+                      <div style={{ fontSize: "2.5rem", fontWeight: 800, color: "var(--primary)", letterSpacing: "-1px", marginBottom: "4px", fontFamily: "var(--font-headings)" }}>
+                        <Counter value={numberPart} />
+                      </div>
+                      {textPart && (
+                        <div style={{ fontSize: "2.5rem", fontWeight: 800, color: "var(--primary)", letterSpacing: "-1px", marginBottom: "16px", fontFamily: "var(--font-headings)", lineHeight: "1.15" }}>
+                          {textPart}
+                        </div>
+                      )}
+                    </>
+                  );
+                })()}
+
                 <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: "1.5", marginBottom: "32px", fontWeight: 500 }}>
                   {service.metricLabel}
                 </p>

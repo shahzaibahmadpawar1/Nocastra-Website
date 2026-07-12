@@ -10,42 +10,42 @@ const projects = [
     title: "Hope of Overseas",
     tag: "Web Development",
     desc: "Complete IT Assessment and professional Custom Web Platform Development.",
-    abbr: "HO",
+    image: "/hope_overseas.png",
   },
   {
     id: 2,
     title: "Darb Stations",
     tag: "Web Development",
     desc: "Optimized corporate interface setup and IT assessment integration.",
-    abbr: "DS",
+    image: "/darb_stations.png",
   },
   {
     id: 3,
     title: "Falcon Tech Trade",
     tag: "Web Development",
     desc: "Infrastructure blueprint design and corporate site creation.",
-    abbr: "FT",
+    image: "/falcon_trade.png",
   },
   {
     id: 4,
     title: "Itechtics",
     tag: "SEO & Optimization",
     desc: "High-performance search engine optimization audit and platform maintenance.",
-    abbr: "IT",
+    image: "/itechtics_seo.png",
   },
   {
     id: 5,
     title: "Adilsher.com",
     tag: "E-Commerce",
     desc: "Full-scale custom shopping system development and server integration.",
-    abbr: "AS",
+    image: "/adilsher_ecommerce.png",
   },
   {
     id: 6,
     title: "PakNGOs",
     tag: "Cyber Security",
     desc: "Granular server hardening and continuous vulnerability audit tests.",
-    abbr: "PN",
+    image: "/pakngos_security.png",
   },
 ];
 
@@ -109,7 +109,7 @@ export default function Portfolio() {
             >
               <div className={styles.visualWrapper}>
                 <div className={styles.visualBg}></div>
-                <span className={styles.mockLogo}>{project.abbr}</span>
+                <img src={project.image} alt={project.title} className={styles.cardImage} />
                 
                 {/* Hover overlay panel */}
                 <div className={styles.overlay}>
@@ -121,7 +121,7 @@ export default function Portfolio() {
                 </div>
               </div>
               
-              <div className={styles.info}>
+              <div style={{ padding: "20px" }}>
                 <span className={styles.categoryTag}>{project.tag}</span>
                 <h3 className={styles.cardTitle}>{project.title}</h3>
               </div>

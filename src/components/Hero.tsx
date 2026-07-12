@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Shield, Lock, ArrowRight, Activity } from "lucide-react";
 import ParticlesBanner from "./ParticlesBanner";
 import Counter from "./Counter";
+import TextSwapper from "./TextSwapper";
 import styles from "./Hero.module.css";
 
 const cardVariants = {
@@ -133,7 +134,11 @@ export default function Hero() {
           </div>
           
           <h1 className={styles.title}>
-            We Have <span className="text-gradient">IT Covered</span>, So You Can Focus on Your Business
+            <span style={{ whiteSpace: "nowrap" }}>We Have <span className="text-gradient"><TextSwapper words={["IT Covered", "Web Secured", "Cloud Managed", "Data Safe", "Code Optimized"]} /></span></span>
+            <br />
+            So You Can Focus on
+            <br />
+            Your Business
           </h1>
           
           <p className={styles.description}>

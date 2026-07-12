@@ -57,8 +57,12 @@ export default function Navbar() {
   return (
     <>
       <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
-        <Link href="/" className={styles.logo}>
-          Nocastra<span className={styles.logoDot}></span>
+        <Link href="/" className={styles.logo} style={{ display: "flex", alignItems: "center" }}>
+          <img 
+            src="/nocastraLogo.png" 
+            alt="Nocastra" 
+            style={{ height: "32px", width: "auto", display: "block" }} 
+          />
         </Link>
 
         {/* Desktop Navigation */}

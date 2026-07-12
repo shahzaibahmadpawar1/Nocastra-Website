@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Mail, Phone, Clock } from "lucide-react";
 import styles from "./Footer.module.css";
 
@@ -21,9 +22,13 @@ export default function Footer() {
         
         {/* About column */}
         <div className={styles.col}>
-          <div className={styles.logo}>
-            Nocastra<span className={styles.logoDot}></span>
-          </div>
+          <Link href="/" className={styles.logo} style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}>
+            <img 
+              src="/nocastraLogo.png" 
+              alt="Nocastra" 
+              style={{ height: "30px", width: "auto", display: "block" }} 
+            />
+          </Link>
           <p className={styles.aboutText}>
             Humanized IT Support by a Team of Experts offering specialized custom development, cloud integrations, server hardening, and vulnerability audits.
           </p>

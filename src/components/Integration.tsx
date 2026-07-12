@@ -66,7 +66,7 @@ export default function Integration() {
         >
           <span className={styles.subtitle}>Our Framework</span>
           <h2 className={styles.title}>
-            IT and Business <span className={styles.titleHighlight}>Seamlessly Integrated</span>
+            IT and Business <span className={styles.titleHighlight} style={{ fontStyle: "italic" }}>Seamlessly Integrated</span>
           </h2>
           <p className={styles.description}>
             Nocastra’s framework is designed around project lifecycles to ensure client satisfaction with end-to-end solutions. We convert complex technical requirements into actual, robust deliverables.
