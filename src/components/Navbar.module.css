@@ -1,0 +1,344 @@
+.navbar {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 9999px;
+  box-shadow: var(--shadow-md);
+}
+
+.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-lg);
+  height: 60px;
+  top: 16px;
+}
+
+.logo {
+  font-family: var(--font-headings);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  display: inline-block;
+}
+
+.navLinks {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.navLink {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.navLink:hover {
+  color: var(--primary);
+}
+
+.chevron {
+  font-size: 0.7rem;
+  transition: var(--transition-fast);
+  margin-left: 2px;
+}
+
+.navItemWithDropdown {
+  position: relative;
+}
+
+.navItemWithDropdown:hover .chevron {
+  transform: rotate(180deg);
+  color: var(--primary);
+}
+
+.navItemWithDropdown:hover .navLink {
+  color: var(--primary);
+}
+
+/* Mega Menu Container */
+.megaMenu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 850px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl), 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-normal);
+  z-index: 1000;
+  top: 90%;
+}
+
+.navItemWithDropdown:hover .megaMenu {
+  opacity: 1;
+  visibility: visible;
+  top: calc(100% - 2px);
+}
+
+/* Mega Menu Sidebar */
+.sidebar {
+  background-color: #0c205f;
+  color: white;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* Mega Menu Links Grid */
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 32px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: var(--transition-fast);
+}
+
+.menuItem:hover {
+  background-color: var(--primary-light);
+}
+
+.menuItem span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.menuItem:hover span {
+  color: var(--primary);
+}
+
+.itemIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: var(--bg-primary);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+}
+
+/* 2. Standard Dropdown (Company) */
+.dropdownList {
+  position: absolute;
+  top: 85px;
+  left: 0;
+  width: 180px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-fast);
+  z-index: 1000;
+}
+
+.scrolled .dropdownList {
+  top: 70px;
+}
+
+.navItemWithDropdown:hover .dropdownList {
+  opacity: 1;
+  visibility: visible;
+  top: 75px;
+}
+
+.scrolled .navItemWithDropdown:hover .dropdownList {
+  top: 65px;
+}
+
+.dropdownListItem {
+  padding: 10px 20px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.dropdownListItem:hover {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  padding-left: 24px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ctaBtn {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+  transition: var(--transition-normal);
+}
+
+.ctaBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.35);
+}
+
+/* Mobile Toggle */
+.mobileToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.burgerLine {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: var(--transition-normal);
+  transform-origin: left center;
+}
+
+.toggleActive .burgerLine:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.toggleActive .burgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.toggleActive .burgerLine:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Mobile Menu Drawer */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 290px;
+  height: 100vh;
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-xl);
+  z-index: 999;
+  padding: 90px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+  transition: var(--transition-normal);
+}
+
+.mobileMenuOpen {
+  right: 0;
+}
+
+.mobileGroupHeader {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 14px;
+  margin-bottom: 4px;
+}
+
+.mobileLink {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.mobileLink:hover {
+  color: var(--primary);
+  padding-left: 6px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.15);
+  backdrop-filter: blur(4px);
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-normal);
+}
+
+.overlayVisible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 990px) {
+  .navLinks, .actions {
+    display: none;
+  }
+  
+  .mobileToggle {
+    display: flex;
+  }
+}
