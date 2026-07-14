@@ -41,7 +41,6 @@ export default function Navbar() {
     { name: "Complete IT Assessment", path: "/it-management/complete-it-assessment", icon: Search },
     { name: "Email Security", path: "/it-management/email-security", icon: Mail },
     { name: "Microsoft 365", path: "/it-management/microsoft-365", icon: Settings },
-    { name: "Microsoft Intune", path: "/it-management/microsoft-intune", icon: Smartphone },
   ];
 
   const webServicesItems = [
@@ -71,6 +70,11 @@ export default function Navbar() {
             Home
           </Link>
 
+          {/* Microsoft Intune Link */}
+          <Link href="/it-management/microsoft-intune" className={styles.navLink}>
+            Microsoft Intune
+          </Link>
+
           {/* IT Management Hover Mega Menu */}
           <div className={styles.navItemWithDropdown}>
             <span className={styles.navLink}>
@@ -96,10 +100,10 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Web Services Hover Mega Menu */}
+          {/* Web Services (Web Development) Dropdown */}
           <div className={styles.navItemWithDropdown}>
             <span className={styles.navLink}>
-              Web Services <ChevronDown className={styles.chevron} size={14} />
+              Web Development <ChevronDown className={styles.chevron} size={14} />
             </span>
             <div className={styles.megaMenu}>
               <div className={styles.sidebar} style={{ backgroundColor: "#f8fafc", display: "flex", alignItems: "center", justifyContent: "center", padding: "20px" }}>
@@ -117,38 +121,6 @@ export default function Navbar() {
                     </Link>
                   );
                 })}
-              </div>
-            </div>
-          </div>
-
-          {/* Company Hover Mega Menu */}
-          <div className={styles.navItemWithDropdown}>
-            <span className={styles.navLink}>
-              Company <ChevronDown className={styles.chevron} size={14} />
-            </span>
-            <div className={styles.megaMenu} style={{ width: "650px" }}>
-              <div className={styles.sidebar} style={{ backgroundColor: "#f8fafc", display: "flex", alignItems: "center", justifyContent: "center", padding: "20px" }}>
-                <img src="/Computer troubleshooting.gif" alt="Company" style={{ width: "100%", height: "auto", maxHeight: "160px", objectFit: "contain" }} />
-              </div>
-              <div className={styles.menuGrid} style={{ gridTemplateColumns: "1fr" }}>
-                <Link href="/company/meet-the-team" className={styles.menuItem}>
-                  <div className={styles.itemIcon}>
-                    <Users size={16} />
-                  </div>
-                  <span>Meet the team</span>
-                </Link>
-                <Link href="/company/about" className={styles.menuItem}>
-                  <div className={styles.itemIcon}>
-                    <BookOpen size={16} />
-                  </div>
-                  <span>About Us</span>
-                </Link>
-                <Link href="/company/contact" className={styles.menuItem}>
-                  <div className={styles.itemIcon}>
-                    <Mail size={16} />
-                  </div>
-                  <span>Contact Us</span>
-                </Link>
               </div>
             </div>
           </div>
@@ -177,6 +149,10 @@ export default function Navbar() {
             Home
           </Link>
 
+          <Link href="/it-management/microsoft-intune" className={styles.mobileLink} style={{ color: "var(--primary)" }}>
+            <Smartphone size={14} /> Microsoft Intune
+          </Link>
+
           <div className={styles.mobileGroupHeader}>IT Management</div>
           {itManagementItems.map((item) => {
             const Icon = item.icon;
@@ -187,7 +163,7 @@ export default function Navbar() {
             );
           })}
 
-          <div className={styles.mobileGroupHeader}>Web Services</div>
+          <div className={styles.mobileGroupHeader}>Web Development</div>
           {webServicesItems.map((item) => {
             const Icon = item.icon;
             return (
@@ -196,17 +172,6 @@ export default function Navbar() {
               </Link>
             );
           })}
-
-          <div className={styles.mobileGroupHeader}>Company</div>
-          <Link href="/company/meet-the-team" className={styles.mobileLink} style={{ paddingLeft: "12px", fontWeight: "600", fontSize: "0.88rem" }}>
-            <Users size={14} style={{ color: "var(--text-muted)" }} /> Meet the team
-          </Link>
-          <Link href="/company/about" className={styles.mobileLink} style={{ paddingLeft: "12px", fontWeight: "600", fontSize: "0.88rem" }}>
-            <BookOpen size={14} style={{ color: "var(--text-muted)" }} /> About
-          </Link>
-          <Link href="/company/contact" className={styles.mobileLink} style={{ paddingLeft: "12px", fontWeight: "600", fontSize: "0.88rem" }}>
-            <Mail size={14} style={{ color: "var(--text-muted)" }} /> Contact
-          </Link>
 
           <Link
             href="/company/contact"

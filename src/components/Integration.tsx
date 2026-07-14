@@ -8,43 +8,35 @@ import styles from "./Integration.module.css";
 const steps = [
   {
     id: 1,
-    title: "1. Audit & Discover",
-    desc: "We analyze your current system configurations, security vulnerabilities, and project goals to build a roadmap.",
+    title: "1. Consultation",
+    desc: "Understand your business, infrastructure, and goals.",
     icon: Search,
     x: 250,
     y: 60,
   },
   {
     id: 2,
-    title: "2. Strategic Design",
-    desc: "Our architects put together a customized, cost-efficient package and clear implementation timeline.",
+    title: "2. Assessment",
+    desc: "Identify risks, opportunities, and the right technology strategy.",
     icon: Cpu,
-    x: 420,
-    y: 170,
+    x: 410,
+    y: 200,
   },
   {
     id: 3,
-    title: "3. Hardening & Build",
-    desc: "Our engineers configure server hardening policies, construct custom web pages, and lock security protocols.",
+    title: "3. Implementation",
+    desc: "Deploy secure, scalable solutions with minimal disruption.",
     icon: Play,
-    x: 350,
+    x: 250,
     y: 340,
   },
   {
     id: 4,
-    title: "4. Web Speed Tuning",
-    desc: "We optimize loaders, bundle scripts, and setup CDNs to achieve top loading speed metrics.",
-    icon: ShieldCheck,
-    x: 150,
-    y: 340,
-  },
-  {
-    id: 5,
-    title: "5. Round-the-clock Support",
-    desc: "We provide regular patches, vulnerability updates, and capacity reports to guarantee uptime.",
+    title: "4. Support",
+    desc: "Continue with proactive monitoring, optimization, and expert guidance.",
     icon: LifeBuoy,
-    x: 80,
-    y: 170,
+    x: 90,
+    y: 200,
   },
 ];
 
@@ -61,15 +53,15 @@ export default function Integration() {
           className={styles.textContent}
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className={styles.subtitle}>Our Framework</span>
+          <span className={styles.subtitle}>Our Process</span>
           <h2 className={styles.title}>
-            IT and Business <span className={styles.titleHighlight} style={{ fontStyle: "italic" }}>Seamlessly Integrated</span>
+            A Simple Process. <span className={styles.titleHighlight} style={{ fontStyle: "italic" }}>Proven Results.</span>
           </h2>
           <p className={styles.description}>
-            Nocastra’s framework is designed around project lifecycles to ensure client satisfaction with end-to-end solutions. We convert complex technical requirements into actual, robust deliverables.
+            We simplify complex technical requirements into a straightforward, four-step lifecycle. Our structured approach guarantees reliable, secure, and minimal-disruption rollouts.
           </p>
 
           <div className={styles.bullets}>
@@ -106,19 +98,18 @@ export default function Integration() {
           className={styles.diagramWrapper}
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <svg className={styles.svgDiagram} viewBox="0 0 500 400">
             {/* Connection Lines from Center */}
             <path d="M 250 200 L 250 60" stroke="var(--border-color)" strokeWidth="2" className={hoveredStep === 1 ? styles.pathPulse : ""} style={{ stroke: hoveredStep === 1 ? "var(--primary)" : "var(--border-color)" }} />
-            <path d="M 250 200 L 420 170" stroke="var(--border-color)" strokeWidth="2" className={hoveredStep === 2 ? styles.pathPulse : ""} style={{ stroke: hoveredStep === 2 ? "var(--primary)" : "var(--border-color)" }} />
-            <path d="M 250 200 L 350 340" stroke="var(--border-color)" strokeWidth="2" className={hoveredStep === 3 ? styles.pathPulse : ""} style={{ stroke: hoveredStep === 3 ? "var(--primary)" : "var(--border-color)" }} />
-            <path d="M 250 200 L 150 340" stroke="var(--border-color)" strokeWidth="2" className={hoveredStep === 4 ? styles.pathPulse : ""} style={{ stroke: hoveredStep === 4 ? "var(--primary)" : "var(--border-color)" }} />
-            <path d="M 250 200 L 80 170" stroke="var(--border-color)" strokeWidth="2" className={hoveredStep === 5 ? styles.pathPulse : ""} style={{ stroke: hoveredStep === 5 ? "var(--primary)" : "var(--border-color)" }} />
+            <path d="M 250 200 L 410 200" stroke="var(--border-color)" strokeWidth="2" className={hoveredStep === 2 ? styles.pathPulse : ""} style={{ stroke: hoveredStep === 2 ? "var(--primary)" : "var(--border-color)" }} />
+            <path d="M 250 200 L 250 340" stroke="var(--border-color)" strokeWidth="2" className={hoveredStep === 3 ? styles.pathPulse : ""} style={{ stroke: hoveredStep === 3 ? "var(--primary)" : "var(--border-color)" }} />
+            <path d="M 250 200 L 90 200" stroke="var(--border-color)" strokeWidth="2" className={hoveredStep === 4 ? styles.pathPulse : ""} style={{ stroke: hoveredStep === 4 ? "var(--primary)" : "var(--border-color)" }} />
             
             {/* Outer Circular Pipeline */}
-            <path d="M 250 60 Q 360 85 420 170 Q 400 270 350 340 Q 250 370 150 340 Q 100 270 80 170 Q 140 85 250 60" 
+            <path d="M 250 60 Q 380 90 410 200 Q 380 310 250 340 Q 120 310 90 200 Q 120 90 250 60" 
               fill="none" 
               stroke="var(--border-color)" 
               strokeWidth="2" 
@@ -165,10 +156,10 @@ export default function Integration() {
                     style={{ pointerEvents: "none" }}
                   >
                     <div style={{ 
-                      color: hoveredStep === step.id ? "white" : "var(--primary)",
-                      display: "flex", 
-                      alignItems: "center", 
-                      justifyContent: "center" 
+                       color: hoveredStep === step.id ? "white" : "var(--primary)",
+                       display: "flex", 
+                       alignItems: "center", 
+                       justifyContent: "center" 
                     }}>
                       <IconComp size={18} />
                     </div>
@@ -205,7 +196,7 @@ export default function Integration() {
                   textTransform: "uppercase" 
                 }}
               >
-                Framework
+                Process
               </text>
             </g>
           </svg>

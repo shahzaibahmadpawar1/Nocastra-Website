@@ -1,38 +1,52 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Smile, Award, Cloud } from "lucide-react";
+import { Briefcase, Award, Users, Laptop, Terminal, Globe } from "lucide-react";
 import Counter from "./Counter";
 import styles from "./Stats.module.css";
 
 const statsData = [
   {
     id: 1,
-    number: "258+",
-    label: "Completed Projects",
+    number: "150+",
+    label: "Businesses Served",
     icon: Briefcase,
     color: "var(--primary)",
   },
   {
     id: 2,
-    number: "150+",
-    label: "Happy Clients",
-    icon: Smile,
+    number: "15+ Years",
+    label: "Industry Experience",
+    icon: Award,
     color: "var(--secondary)",
   },
   {
     id: 3,
-    number: "172+",
-    label: "Service Providers",
-    icon: Award,
+    number: "Microsoft Partner",
+    label: "Certified Professionals",
+    icon: Users,
     color: "var(--accent)",
   },
   {
     id: 4,
-    number: "214+",
-    label: "Cloud Designs",
-    icon: Cloud,
+    number: "Hundreds",
+    label: "Devices Managed",
+    icon: Laptop,
     color: "var(--primary)",
+  },
+  {
+    id: 5,
+    number: "50+",
+    label: "Web Solutions Delivered",
+    icon: Terminal,
+    color: "var(--secondary)",
+  },
+  {
+    id: 6,
+    number: "Worldwide",
+    label: "Business Support",
+    icon: Globe,
+    color: "var(--accent)",
   },
 ];
 
@@ -53,6 +67,14 @@ const itemVariants = {
 export default function Stats() {
   return (
     <section className={styles.statsSection}>
+      <div className={styles.header}>
+        <span className={styles.subtitle}>Trust Section</span>
+        <h2 className={styles.title}>Trusted by Businesses Across the Globe</h2>
+        <p className={styles.description}>
+          Supporting organizations across Pakistan, Saudi Arabia, UAE, Algeria, the United Kingdom, and beyond with enterprise IT solutions and secure digital experiences.
+        </p>
+      </div>
+
       <motion.div 
         className={styles.grid}
         variants={containerVariants}

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Shield, Lock, ArrowRight, Activity } from "lucide-react";
+import { Smartphone, Terminal, Mail, ArrowRight } from "lucide-react";
 import ParticlesBanner from "./ParticlesBanner";
 import Counter from "./Counter";
 import TextSwapper from "./TextSwapper";
@@ -49,17 +49,6 @@ export default function Hero() {
     }
   };
 
-  const handleScrollToServices = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const servicesSection = document.getElementById("services");
-    if (servicesSection) {
-      window.scrollTo({
-        top: servicesSection.offsetTop - 70,
-        behavior: "smooth",
-      });
-    }
-  };
-
   const rotateDeck = () => {
     setActiveIndex((prev) => (prev + 1) % 3);
   };
@@ -67,39 +56,39 @@ export default function Hero() {
   const cardsData = [
     {
       id: 0,
-      title: "System Hardening",
-      icon: Lock,
-      label: "INFRASTRUCTURE RATING",
-      value: "92%",
+      title: "Microsoft Intune",
+      icon: Smartphone,
+      label: "DEVICES ENROLLED",
+      value: "99%",
       progressClass: styles.progressBlue,
       iconClass: styles.blueIcon,
       bgClass: styles.mainCard,
       isPulse: true,
-      desc: "Granular server hardening configurations to secure endpoints, patch open registry flaws, and block malicious traffic flows."
+      desc: "Deploy, manage, and secure your company devices (Windows, macOS, iOS, Android) through enterprise mobility management policies."
     },
     {
       id: 1,
-      title: "Vulnerability Assessment",
-      icon: Shield,
-      label: "COMPLIANCE INDEX",
-      value: "93%",
+      title: "Web Development",
+      icon: Terminal,
+      label: "WEB PERFORMANCE",
+      value: "98%",
       progressClass: styles.progressTeal,
       iconClass: styles.tealIcon,
       bgClass: styles.statCard,
       isPulse: false,
-      desc: "Continuous vulnerability scanning and audit assessments to verify package compliance indices and report exploits."
+      desc: "Scale your business with secure, high-performance web applications, custom databases, and automated corporate platforms built for growth."
     },
     {
       id: 2,
-      title: "Maintenance",
-      icon: Activity,
-      label: "SYSTEM UPTIME",
-      value: "90%",
+      title: "Email Security",
+      icon: Mail,
+      label: "SPAM BLOCKED",
+      value: "99.9%",
       progressClass: styles.progressCyan,
       iconClass: styles.cyanIcon,
       bgClass: styles.secondaryCard,
       isPulse: false,
-      desc: "Automated patch monitoring, local server upkeep, and regular database synchronization cycles to ensure high uptimes."
+      desc: "Protect your enterprise communications. Shield employee inboxes from advanced phishing attempts, spam, and credential harvesting threats."
     },
   ];
 
@@ -134,23 +123,34 @@ export default function Hero() {
           </div>
           
           <h1 className={styles.title}>
-            <span style={{ whiteSpace: "nowrap" }}>We Have <span className="text-gradient"><TextSwapper words={["IT Covered", "Web Secured", "Cloud Managed", "Data Safe", "Code Optimized"]} /></span></span>
+            We Keep Your{" "}
+            <span className="text-gradient" style={{ display: "inline-block" }}>
+              <TextSwapper words={[
+                "Intune Managed",
+                "Data Secure",
+                "Infra Optimized",
+                "Endpoints Protected",
+                "Devices Secured",
+                "Azure Powered",
+                "Network Protected",
+                "Business Connected",
+                "Code Optimized"
+              ]} />
+            </span>
             <br />
-            So You Can Focus on
-            <br />
-            Your Business
+            So You Can Focus on Your Business
           </h1>
           
           <p className={styles.description}>
-            Nocastra provides a wide range of IT deployment, maintenance, and support services aimed to provide optimized yet cost-effective solutions designed around your requirements.
+            Nocastra helps organizations build, secure, and manage modern IT environments through Microsoft Intune, Microsoft 365, Azure, cloud infrastructure, and managed IT services. Combined with custom web development and dedicated human support, we become your long-term technology partner for growth.
           </p>
           
           <div className={styles.btnGroup}>
             <a href="#contact" onClick={handleScrollToContact} className="btn-primary">
-              Get Free Consultation <ArrowRight size={18} />
+              Talk to an IT Expert <ArrowRight size={18} />
             </a>
-            <a href="#services" onClick={handleScrollToServices} className="btn-secondary">
-              Explore Services
+            <a href="#contact" onClick={handleScrollToContact} className="btn-secondary">
+              Book a Free Consultation
             </a>
           </div>
         </motion.div>

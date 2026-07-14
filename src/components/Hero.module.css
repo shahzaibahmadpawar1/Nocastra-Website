@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   min-height: 100vh;
-  padding: 140px 5% 80px;
+  padding: 110px 5% 50px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -68,7 +68,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   border: 1px solid rgba(37, 99, 235, 0.15);
   box-shadow: var(--shadow-sm);
 }
@@ -84,14 +84,14 @@
 .title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1.15;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   letter-spacing: -1px;
 }
 
 .description {
   font-size: clamp(1rem, 1.2vw, 1.15rem);
   color: var(--text-secondary);
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   max-width: 580px;
   line-height: 1.6;
 }
