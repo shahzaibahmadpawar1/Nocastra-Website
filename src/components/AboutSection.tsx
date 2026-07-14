@@ -63,7 +63,7 @@ export default function AboutSection() {
         >
           <div className={styles.imageFrame}>
             <img 
-              src="/Computer troubleshooting.gif" 
+              src="/gifs/Computer troubleshooting.gif" 
               alt="IT Support Illustration" 
               className={styles.image} 
             />

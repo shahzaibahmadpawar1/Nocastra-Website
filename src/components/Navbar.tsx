@@ -58,7 +58,7 @@ export default function Navbar() {
       <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
         <Link href="/" className={styles.logo} style={{ display: "flex", alignItems: "center" }}>
           <img 
-            src="/nocastraLogo.png" 
+            src="/images/logos/nocastraLogo.png" 
             alt="Nocastra" 
             style={{ height: "32px", width: "auto", display: "block" }} 
           />
@@ -82,7 +82,7 @@ export default function Navbar() {
             </span>
             <div className={styles.megaMenu}>
               <div className={styles.sidebar} style={{ backgroundColor: "#f8fafc", display: "flex", alignItems: "center", justifyContent: "center", padding: "20px" }}>
-                <img src="/Server.gif" alt="IT Management" style={{ width: "100%", height: "auto", maxHeight: "160px", objectFit: "contain" }} />
+                <img src="/gifs/Server.gif" alt="IT Management" style={{ width: "100%", height: "auto", maxHeight: "160px", objectFit: "contain" }} />
               </div>
               <div className={styles.menuGrid}>
                 {itManagementItems.map((item) => {
@@ -107,7 +107,7 @@ export default function Navbar() {
             </span>
             <div className={styles.megaMenu}>
               <div className={styles.sidebar} style={{ backgroundColor: "#f8fafc", display: "flex", alignItems: "center", justifyContent: "center", padding: "20px" }}>
-                <img src="/Online world.gif" alt="Web Services" style={{ width: "100%", height: "auto", maxHeight: "160px", objectFit: "contain" }} />
+                <img src="/gifs/Online world.gif" alt="Web Services" style={{ width: "100%", height: "auto", maxHeight: "160px", objectFit: "contain" }} />
               </div>
               <div className={styles.menuGrid}>
                 {webServicesItems.map((item) => {

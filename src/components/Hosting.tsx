@@ -39,7 +39,7 @@ export default function Hosting() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <img src="/Logo.png" alt="SpeedHost Logo" className={styles.speedHostLogo} />
+          <img src="/images/logos/Logo.png" alt="SpeedHost Logo" className={styles.speedHostLogo} />
           <h2 className={styles.title}>
             Need <span className={styles.titleHighlight}>Hosting</span> Too?
           </h2>

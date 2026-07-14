@@ -221,17 +221,17 @@ export default async function ITManagementPage({ params }: Props) {
 
   let gifPath = "";
   if (slug === "azure-cloud" || slug === "aws-cloud") {
-    gifPath = "/Online world.gif";
+    gifPath = "/gifs/Online world.gif";
   } else if (slug === "google-cloud") {
-    gifPath = "/Online world (1).gif";
+    gifPath = "/gifs/Online world (1).gif";
   } else if (slug === "microsoft-365" || slug === "microsoft-intune") {
-    gifPath = "/hero3.gif";
+    gifPath = "/gifs/hero3.gif";
   } else if (slug === "server-hardening") {
-    gifPath = "/hero1.gif";
+    gifPath = "/gifs/hero1.gif";
   } else if (slug === "vulnerability-assessment" || slug === "complete-it-assessment") {
-    gifPath = "/hero2.gif";
+    gifPath = "/gifs/hero2.gif";
   } else if (slug === "email-security") {
-    gifPath = "/Security On.gif";
+    gifPath = "/gifs/Security On.gif";
   }
 
   const splitFeature = (feat: string) => {

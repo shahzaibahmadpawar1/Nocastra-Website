@@ -24,7 +24,7 @@ export default function Footer() {
         <div className={styles.col}>
           <Link href="/" className={styles.logo} style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}>
             <img 
-              src="/nocastraLogo.png" 
+              src="/images/logos/nocastraLogo.png" 
               alt="Nocastra" 
               style={{ height: "30px", width: "auto", display: "block" }} 
             />

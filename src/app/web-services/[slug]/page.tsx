@@ -189,19 +189,19 @@ export default async function WebServicesPage({ params }: Props) {
 
   let gifPath = "";
   if (slug === "web-development") {
-    gifPath = "/Online world.gif";
+    gifPath = "/gifs/Online world.gif";
   } else if (slug === "web-maintenance") {
-    gifPath = "/hero3.gif";
+    gifPath = "/gifs/hero3.gif";
   } else if (slug === "site-monitoring") {
-    gifPath = "/database.gif";
+    gifPath = "/gifs/database.gif";
   } else if (slug === "speed-optimization") {
-    gifPath = "/Computer troubleshooting.gif";
+    gifPath = "/gifs/Computer troubleshooting.gif";
   } else if (slug === "website-security") {
-    gifPath = "/Security On.gif";
+    gifPath = "/gifs/Security On.gif";
   } else if (slug === "graphic-design") {
-    gifPath = "/Online world (1).gif";
+    gifPath = "/gifs/Online world (1).gif";
   } else if (slug === "nocastra-send") {
-    gifPath = "/Mobile Marketing.gif";
+    gifPath = "/gifs/Mobile Marketing.gif";
   }
 
   const splitFeature = (feat: string) => {

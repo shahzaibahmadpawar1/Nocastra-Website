@@ -98,7 +98,7 @@ export default function AboutPage() {
                 justifyContent: "center"
               }}>
                 <img 
-                  src="/Computer troubleshooting.gif" 
+                  src="/gifs/Computer troubleshooting.gif" 
                   alt="About Nocastra" 
                   style={{ 
                     width: "100%", 
