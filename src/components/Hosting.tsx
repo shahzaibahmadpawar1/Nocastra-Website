@@ -39,7 +39,7 @@ export default function Hosting() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <img src="/images/logos/Logo.png" alt="SpeedHost Logo" className={styles.speedHostLogo} />
+          <img src="/images/logos/SpeedHostLogo.png" alt="SpeedHost Logo" className={styles.speedHostLogo} />
           <h2 className={styles.title}>
             Need <span className={styles.titleHighlight}>Hosting</span> Too?
           </h2>
@@ -47,7 +47,7 @@ export default function Hosting() {
             Reliable infrastructure starts with reliable hosting.
           </h3>
           <p className={styles.description}>
-            Through our sister company, <strong style={{ fontStyle: "italic", color: "var(--secondary)" }}>SpeedHost</strong>, we provide premium server architecture and management to ensure your enterprise applications and websites run 24/7 with peak performance.
+            Through our sister company, <strong style={{ fontStyle: "italic", color: "var(--primary)" }}>SpeedHost</strong>, we provide premium server architecture and management to ensure your enterprise applications and websites run 24/7 with peak performance.
           </p>
           <p className={styles.description} style={{ fontWeight: 600 }}>
             One partner for your entire digital infrastructure.

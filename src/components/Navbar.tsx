@@ -81,8 +81,8 @@ export default function Navbar() {
               IT Management <ChevronDown className={styles.chevron} size={14} />
             </span>
             <div className={styles.megaMenu}>
-              <div className={styles.sidebar} style={{ backgroundColor: "#f8fafc", display: "flex", alignItems: "center", justifyContent: "center", padding: "20px" }}>
-                <img src="/gifs/Server.gif" alt="IT Management" style={{ width: "100%", height: "auto", maxHeight: "160px", objectFit: "contain" }} />
+              <div className={styles.sidebar}>
+                <img src="/gifs/Server.gif" alt="IT Management" className={styles.sidebarGif} />
               </div>
               <div className={styles.menuGrid}>
                 {itManagementItems.map((item) => {
@@ -106,8 +106,8 @@ export default function Navbar() {
               Web Development <ChevronDown className={styles.chevron} size={14} />
             </span>
             <div className={styles.megaMenu}>
-              <div className={styles.sidebar} style={{ backgroundColor: "#f8fafc", display: "flex", alignItems: "center", justifyContent: "center", padding: "20px" }}>
-                <img src="/gifs/Online world.gif" alt="Web Services" style={{ width: "100%", height: "auto", maxHeight: "160px", objectFit: "contain" }} />
+              <div className={styles.sidebar}>
+                <img src="/gifs/Online world.gif" alt="Web Services" className={styles.sidebarGif} />
               </div>
               <div className={styles.menuGrid}>
                 {webServicesItems.map((item) => {
