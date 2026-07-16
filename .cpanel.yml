@@ -3,8 +3,6 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/nocastra/public_html/
     - cd /home/nocastra/repositories/Nocastra-Website
-    - /bin/rm -rf out/
-    - npm install
     - npm run build
     - /bin/cp -r out/* $DEPLOYPATH
     - /bin/find $DEPLOYPATH -type d -exec /bin/chmod 755 {} \;
