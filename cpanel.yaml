@@ -1,5 +1,4 @@
 deployment:
-  version: 1.0
   tasks:
     - export DEPLOYPATH=/home/nocastra/public_html/
     - /bin/cp -r . $DEPLOYPATH
