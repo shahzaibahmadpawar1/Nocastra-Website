@@ -1,45 +1,10 @@
----
-# cPanel Deployment Configuration for Nocastra Website
-# This file should be placed in the root of your repository
-# Replace 'username' with your actual cPanel username
-
 deployment:
   version: 1.0
-  
-  # Define the deployment path (public_html directory)
   tasks:
-    # Export deployment path as environment variable
     - export DEPLOYPATH=/home/nocastra/public_html/
-  
-    # Remove old files (optional - uncomment if you want clean deployment)
-    - /bin/rm -rf $DEPLOYPATH/*
-    
-    # Copy all project files to deployment directory
     - /bin/cp -r . $DEPLOYPATH
-    
-    # Fix directory permissions (755 for directories)
     - /bin/find $DEPLOYPATH -type d -exec /bin/chmod 755 {} \;
-    
-    # Fix file permissions (644 for files)
     - /bin/find $DEPLOYPATH -type f -exec /bin/chmod 644 {} \;
-    
-    # Remove .git folder from production (recommended)
     - /bin/rm -rf $DEPLOYPATH/.git
-    
-    # Remove deployment config file itself
     - /bin/rm -f $DEPLOYPATH/.cpanel.yaml
-    
-    # Remove README and other unnecessary files (optional)
-    # - /bin/rm -f $DEPLOYPATH/README.md
-    # - /bin/rm -f $DEPLOYPATH/.gitignore
-    
-    # Create necessary directories if they don't exist
-    - /bin/mkdir -p $DEPLOYPATH/uploads
-    - /bin/mkdir -p $DEPLOYPATH/logs
-    
-    # Set permissions for upload directories (775)
-    - /bin/chmod 775 $DEPLOYPATH/uploads
-    - /bin/chmod 775 $DEPLOYPATH/logs
-
-# Note: This deployment runs automatically when you push to your repository
-
+EOF
