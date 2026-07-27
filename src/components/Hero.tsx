@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Smartphone, Terminal, Mail, ArrowRight } from "lucide-react";
 import ParticlesBanner from "./ParticlesBanner";
 import Counter from "./Counter";
-import TextSwapper from "./TextSwapper";
+import TypewriterEffect from "./TypewriterEffect";
 import styles from "./Hero.module.css";
 
 const cardVariants = {
@@ -123,19 +123,33 @@ export default function Hero() {
           </div>
           
           <h1 className={styles.title}>
-            We Keep Your{" "}
-            <span className="text-gradient" style={{ display: "inline-block" }}>
-              <TextSwapper words={[
-                "Intune Managed",
-                "Data Secure",
-                "Infra Optimized",
-                "Endpoints Protected",
-                "Devices Secured",
-                "Azure Powered",
-                "Network Protected",
-                "Business Connected",
-                "Code Optimized"
-              ]} />
+            We Keep Your
+            <br />
+            <span className="text-gradient" style={{ display: "inline-block", minHeight: "1.15em", verticalAlign: "bottom" }}>
+              <TypewriterEffect
+                words={[
+                  { word: "Intune Managed" },
+                  { word: "Data Secure" },
+                  { word: "Infra Optimized" },
+                  { word: "Endpoints Protected" },
+                  { word: "Devices Secured" },
+                  { word: "Azure Powered" },
+                  { word: "Network Protected" },
+                  { word: "Business Connected" },
+                  { word: "Code Optimized" }
+                ]}
+                typingSpeed={80}
+                deletingSpeed={40}
+                pauseDuration={1500}
+                cursorColor="var(--primary)"
+                cursorWidth={3}
+                textColor="var(--primary)"
+                style={{
+                  fontStyle: "italic",
+                  fontWeight: 800,
+                  fontFamily: "var(--font-headings)"
+                }}
+              />
             </span>
             <br />
             So You Can Focus on Your Business

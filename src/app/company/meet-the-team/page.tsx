@@ -50,9 +50,9 @@ export default function MeetTheTeamPage() {
     <>
       <Navbar />
       <main style={{ minHeight: "100vh", paddingTop: "80px", backgroundColor: "#f8fafc" }}>
-        
+
         {/* Breadcrumb Header */}
-        <section style={{ 
+        <section style={{
           backgroundColor: "#f1f5f9",
           padding: "60px 5% 40px",
           borderBottom: "1px solid #cbd5e1",
@@ -61,9 +61,9 @@ export default function MeetTheTeamPage() {
         }}>
           <ParticlesBanner />
           <div style={{ maxWidth: "1200px", margin: "0 auto", position: "relative", zIndex: 1 }}>
-            <div style={{ 
-              fontSize: "0.85rem", 
-              color: "var(--text-muted)", 
+            <div style={{
+              fontSize: "0.85rem",
+              color: "var(--text-muted)",
               fontWeight: 700,
               textTransform: "uppercase",
               letterSpacing: "1px",
@@ -71,10 +71,10 @@ export default function MeetTheTeamPage() {
             }}>
               <Link href="/">Home</Link> &nbsp;&gt;&nbsp; Company &nbsp;&gt;&nbsp; <span style={{ color: "var(--primary)" }}>Meet the Team</span>
             </div>
-            
-            <h1 style={{ 
-              fontSize: "clamp(2rem, 3.5vw, 3rem)", 
-              letterSpacing: "-1px", 
+
+            <h1 style={{
+              fontSize: "clamp(2rem, 3.5vw, 3rem)",
+              letterSpacing: "-1px",
               color: "var(--text-primary)",
               marginBottom: "16px"
             }}>
@@ -89,19 +89,19 @@ export default function MeetTheTeamPage() {
         {/* Team Grid */}
         <section style={{ padding: "80px 5%" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-            <div style={{ 
-              display: "grid", 
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", 
-              gap: "32px" 
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: "32px"
             }}>
               {teamMembers.map((member, idx) => {
                 const Icon = member.icon;
                 return (
-                  <div 
-                    key={idx} 
+                  <div
+                    key={idx}
                     className="glass-card"
-                    style={{ 
-                      borderRadius: "20px", 
+                    style={{
+                      borderRadius: "20px",
                       padding: "40px 32px",
                       display: "flex",
                       flexDirection: "column",
@@ -109,10 +109,10 @@ export default function MeetTheTeamPage() {
                       textAlign: "center"
                     }}
                   >
-                    <div style={{ 
-                      width: "64px", 
-                      height: "64px", 
-                      borderRadius: "16px", 
+                    <div style={{
+                      width: "64px",
+                      height: "64px",
+                      borderRadius: "16px",
                       backgroundColor: member.bg,
                       color: member.color,
                       display: "flex",
@@ -122,12 +122,12 @@ export default function MeetTheTeamPage() {
                     }}>
                       <Icon size={28} />
                     </div>
-                    
+
                     <h3 style={{ fontSize: "1.25rem", color: "var(--text-primary)", marginBottom: "6px" }}>{member.name}</h3>
                     <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--primary)", textTransform: "uppercase", letterSpacing: "0.5px", marginBottom: "16px", display: "block" }}>
                       {member.role}
                     </span>
-                    
+
                     <p style={{ fontSize: "0.92rem", color: "var(--text-secondary)", lineHeight: "1.5" }}>
                       {member.specialty}
                     </p>
