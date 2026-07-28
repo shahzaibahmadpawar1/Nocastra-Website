@@ -297,13 +297,9 @@ export default async function ITManagementPage({ params }: Props) {
 
         {/* Content Section */}
         <section style={{ padding: "80px 5%" }}>
-          <div style={{ 
+          <div className="responsive-grid-service" style={{ 
             maxWidth: "1200px", 
-            margin: "0 auto", 
-            display: "grid", 
-            gridTemplateColumns: "1.2fr 0.8fr", 
-            gap: "64px",
-            alignItems: "start"
+            margin: "0 auto"
           }}>
             
             {/* Left side details */}

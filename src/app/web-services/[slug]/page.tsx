@@ -193,7 +193,7 @@ export default async function WebServicesPage({ params }: Props) {
   } else if (slug === "web-maintenance") {
     gifPath = "/gifs/hero3.gif";
   } else if (slug === "site-monitoring") {
-    gifPath = "/gifs/database.gif";
+    gifPath = "/gifs/Server.gif";
   } else if (slug === "speed-optimization") {
     gifPath = "/gifs/Computer troubleshooting.gif";
   } else if (slug === "website-security") {
@@ -267,13 +267,9 @@ export default async function WebServicesPage({ params }: Props) {
 
         {/* Content Section */}
         <section style={{ padding: "80px 5%" }}>
-          <div style={{ 
+          <div className="responsive-grid-service" style={{ 
             maxWidth: "1200px", 
-            margin: "0 auto", 
-            display: "grid", 
-            gridTemplateColumns: "1.2fr 0.8fr", 
-            gap: "64px",
-            alignItems: "start"
+            margin: "0 auto"
           }}>
             
             {/* Left side details */}

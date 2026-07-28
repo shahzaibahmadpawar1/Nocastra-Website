@@ -53,13 +53,9 @@ export default function AboutPage() {
 
         {/* Content Details */}
         <section style={{ padding: "80px 5%" }}>
-          <div style={{ 
+          <div className="responsive-grid-about" style={{ 
             maxWidth: "1200px", 
-            margin: "0 auto", 
-            display: "grid", 
-            gridTemplateColumns: "1.1fr 0.9fr", 
-            gap: "80px",
-            alignItems: "center"
+            margin: "0 auto"
           }}>
             
             <div>
@@ -71,7 +67,7 @@ export default function AboutPage() {
                 We believe that technology should be an asset, not a bottleneck. Whether managing hybrid databases on Azure or hardening Linux servers against automated threat bots, Nocastra delivers clear, proactive maintenance that keeps your infrastructure 100% resilient.
               </p>
 
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
+              <div className="responsive-grid-stats">
                 <div style={{ display: "flex", gap: "12px" }}>
                   <ShieldCheck size={24} style={{ color: "var(--primary)", flexShrink: 0 }} />
                   <div>
