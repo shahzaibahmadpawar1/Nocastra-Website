@@ -219,12 +219,12 @@ export default async function WebServicesPage({ params }: Props) {
   return (
     <>
       <Navbar />
-      <main style={{ minHeight: "100vh", paddingTop: "80px", backgroundColor: "#f8fafc" }}>
+      <main style={{ minHeight: "100vh", backgroundColor: "#f8fafc" }}>
         
         {/* Breadcrumb Header */}
         <section style={{ 
           backgroundColor: "#f1f5f9",
-          padding: "60px 5% 40px",
+          padding: "140px 5% 40px",
           borderBottom: "1px solid #cbd5e1",
           position: "relative",
           overflow: "hidden"
@@ -252,8 +252,8 @@ export default async function WebServicesPage({ params }: Props) {
             </h1>
             <span style={{ 
               display: "inline-block", 
-              backgroundColor: "var(--secondary-light)", 
-              color: "var(--secondary)", 
+              backgroundColor: "var(--primary-light)", 
+              color: "var(--primary)", 
               padding: "6px 14px", 
               borderRadius: "4px", 
               fontWeight: 700, 
@@ -289,8 +289,8 @@ export default async function WebServicesPage({ params }: Props) {
                 {service.features.map((feature, idx) => (
                   <div key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
                     <div style={{ 
-                      backgroundColor: "var(--secondary-light)", 
-                      color: "var(--secondary)", 
+                      backgroundColor: "var(--primary-light)", 
+                      color: "var(--primary)", 
                       width: "24px", 
                       height: "24px", 
                       borderRadius: "50%", 
@@ -308,7 +308,7 @@ export default async function WebServicesPage({ params }: Props) {
               </div>
 
               <div>
-                <Link href="/company/contact" className="btn-primary" style={{ backgroundColor: "var(--secondary)", boxShadow: "0 4px 14px rgba(13, 148, 136, 0.3)" }}>
+                <Link href="/company/contact" className="btn-primary">
                   {service.ctaText} <ArrowRight size={18} />
                 </Link>
               </div>
@@ -352,11 +352,11 @@ export default async function WebServicesPage({ params }: Props) {
                   const { numberPart, textPart } = splitMetric(service.metric);
                   return (
                     <>
-                      <div style={{ fontSize: "2.5rem", fontWeight: 800, color: "var(--secondary)", letterSpacing: "-1px", marginBottom: "4px", fontFamily: "var(--font-headings)" }}>
+                      <div style={{ fontSize: "2.5rem", fontWeight: 800, color: "var(--primary)", letterSpacing: "-1px", marginBottom: "4px", fontFamily: "var(--font-headings)" }}>
                         <Counter value={numberPart} />
                       </div>
                       {textPart && (
-                        <div style={{ fontSize: "2.5rem", fontWeight: 800, color: "var(--secondary)", letterSpacing: "-1px", marginBottom: "16px", fontFamily: "var(--font-headings)", lineHeight: "1.15" }}>
+                        <div style={{ fontSize: "2.5rem", fontWeight: 800, color: "var(--primary)", letterSpacing: "-1px", marginBottom: "16px", fontFamily: "var(--font-headings)", lineHeight: "1.15" }}>
                           {textPart}
                         </div>
                       )}
@@ -370,15 +370,15 @@ export default async function WebServicesPage({ params }: Props) {
 
                 <div style={{ borderTop: "1px solid var(--border-color)", paddingTop: "32px", display: "flex", flexDirection: "column", gap: "20px" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                    <ShieldCheck size={20} style={{ color: "var(--primary)" }} />
+                    <ShieldCheck size={20} style={{ color: "var(--secondary)" }} />
                     <span style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--text-primary)" }}>Optimized Web Standard Architecture</span>
                   </div>
                   <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                    <Users size={20} style={{ color: "var(--primary)" }} />
+                    <Users size={20} style={{ color: "var(--secondary)" }} />
                     <span style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--text-primary)" }}>Dedicated Team of Support Experts</span>
                   </div>
                   <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                    <Award size={20} style={{ color: "var(--primary)" }} />
+                    <Award size={20} style={{ color: "var(--secondary)" }} />
                     <span style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--text-primary)" }}>15+ Years Market Experience</span>
                   </div>
                 </div>

@@ -249,12 +249,12 @@ export default async function ITManagementPage({ params }: Props) {
   return (
     <>
       <Navbar />
-      <main style={{ minHeight: "100vh", paddingTop: "80px", backgroundColor: "#f8fafc" }}>
+      <main style={{ minHeight: "100vh", backgroundColor: "#f8fafc" }}>
         
         {/* Breadcrumb Header */}
         <section style={{ 
           backgroundColor: "#f1f5f9",
-          padding: "60px 5% 40px",
+          padding: "140px 5% 40px",
           borderBottom: "1px solid #cbd5e1",
           position: "relative",
           overflow: "hidden"
