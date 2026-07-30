@@ -3,11 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { 
-  Menu, X, ChevronDown, ArrowRight,
-  Cloud, Server, ShieldAlert, Lock, Mail, Search, Smartphone, Layers,
-  Terminal, Shield, Zap, Activity, Palette, Send, Settings, Users, BookOpen
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
@@ -32,25 +28,15 @@ export default function Navbar() {
     setIsMenuOpen(false);
   }, [pathname]);
 
-  const itManagementItems = [
-    { name: "Azure Cloud", path: "/it-management/azure-cloud", icon: Cloud },
-    { name: "AWS Cloud", path: "/it-management/aws-cloud", icon: Server },
-    { name: "Google Cloud", path: "/it-management/google-cloud", icon: Layers },
-    { name: "Server Hardening", path: "/it-management/server-hardening", icon: Lock },
-    { name: "Vulnerability Assessment", path: "/it-management/vulnerability-assessment", icon: ShieldAlert },
-    { name: "Complete IT Assessment", path: "/it-management/complete-it-assessment", icon: Search },
-    { name: "Email Security", path: "/it-management/email-security", icon: Mail },
-    { name: "Microsoft 365", path: "/it-management/microsoft-365", icon: Settings },
-  ];
-
-  const webServicesItems = [
-    { name: "Web Development", path: "/web-services/web-development", icon: Terminal },
-    { name: "Web Maintenance", path: "/web-services/web-maintenance", icon: Settings },
-    { name: "Speed Optimization", path: "/web-services/speed-optimization", icon: Zap },
-    { name: "Website Security", path: "/web-services/website-security", icon: Shield },
-    { name: "Site Monitoring", path: "/web-services/site-monitoring", icon: Activity },
-    { name: "Graphic Design", path: "/web-services/graphic-design", icon: Palette },
-    { name: "Nocastra Send", path: "/web-services/nocastra-send", icon: Send },
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Microsoft Intune", path: "/microsoft-intune" },
+    { name: "Microsoft 365", path: "/microsoft-365" },
+    { name: "Cloud", path: "/cloud" },
+    { name: "Web Development", path: "/web-development" },
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -66,68 +52,15 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className={styles.navLinks}>
-          <Link href="/" className={styles.navLink}>
-            Home
-          </Link>
-
-          {/* Microsoft Intune Link */}
-          <Link href="/it-management/microsoft-intune" className={styles.navLink}>
-            Microsoft Intune
-          </Link>
-
-          {/* IT Management Hover Mega Menu */}
-          <div className={styles.navItemWithDropdown}>
-            <span className={styles.navLink}>
-              IT Management <ChevronDown className={styles.chevron} size={14} />
-            </span>
-            <div className={styles.megaMenu}>
-              <div className={styles.sidebar}>
-                <img src="/gifs/Server.gif" alt="IT Management" className={styles.sidebarGif} />
-              </div>
-              <div className={styles.menuGrid}>
-                {itManagementItems.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <Link key={item.path} href={item.path} className={styles.menuItem}>
-                      <div className={styles.itemIcon}>
-                        <Icon size={16} />
-                      </div>
-                      <span>{item.name}</span>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          {/* Web Services (Web Development) Dropdown */}
-          <div className={styles.navItemWithDropdown}>
-            <span className={styles.navLink}>
-              Web Development <ChevronDown className={styles.chevron} size={14} />
-            </span>
-            <div className={styles.megaMenu}>
-              <div className={styles.sidebar}>
-                <img src="/gifs/Online world.gif" alt="Web Services" className={styles.sidebarGif} />
-              </div>
-              <div className={styles.menuGrid}>
-                {webServicesItems.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <Link key={item.path} href={item.path} className={styles.menuItem}>
-                      <div className={styles.itemIcon}>
-                        <Icon size={16} />
-                      </div>
-                      <span>{item.name}</span>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
+          {navItems.map((item) => (
+            <Link key={item.path} href={item.path} className={styles.navLink}>
+              {item.name}
+            </Link>
+          ))}
         </div>
 
         <div className={styles.actions}>
-          <Link href="/company/contact" className={styles.ctaBtn}>
+          <Link href="/contact" className={styles.ctaBtn}>
             Free Consultation
           </Link>
         </div>
@@ -145,36 +78,13 @@ export default function Navbar() {
 
         {/* Mobile Menu Drawer */}
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ""}`}>
-          <Link href="/" className={styles.mobileLink}>
-            Home
-          </Link>
-
-          <Link href="/it-management/microsoft-intune" className={styles.mobileLink} style={{ color: "var(--primary)" }}>
-            <Smartphone size={14} /> Microsoft Intune
-          </Link>
-
-          <div className={styles.mobileGroupHeader}>IT Management</div>
-          {itManagementItems.map((item) => {
-            const Icon = item.icon;
-            return (
-              <Link key={item.path} href={item.path} className={styles.mobileLink} style={{ paddingLeft: "12px", fontWeight: "600", fontSize: "0.88rem" }}>
-                <Icon size={14} style={{ color: "var(--primary)" }} /> {item.name}
-              </Link>
-            );
-          })}
-
-          <div className={styles.mobileGroupHeader}>Web Development</div>
-          {webServicesItems.map((item) => {
-            const Icon = item.icon;
-            return (
-              <Link key={item.path} href={item.path} className={styles.mobileLink} style={{ paddingLeft: "12px", fontWeight: "600", fontSize: "0.88rem" }}>
-                <Icon size={14} style={{ color: "var(--secondary)" }} /> {item.name}
-              </Link>
-            );
-          })}
-
+          {navItems.map((item) => (
+            <Link key={item.path} href={item.path} className={styles.mobileLink}>
+              {item.name}
+            </Link>
+          ))}
           <Link
-            href="/company/contact"
+            href="/contact"
             className={styles.ctaBtn}
             style={{ width: "100%", marginTop: "16px", display: "inline-flex", justifyContent: "center" }}
           >
