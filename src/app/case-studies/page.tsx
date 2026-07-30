@@ -169,7 +169,7 @@ export default function CaseStudiesPage() {
                         </ul>
                       </div>
 
-                      <button className="btn-primary" style={{ width: "100%", backgroundColor: study.color, border: "none" }} onClick={() => alert("Full case study coming soon!")}>
+                      <button className="btn-primary" style={{ width: "100%", backgroundColor: study.color, border: "none" }}>
                         Read Full Story
                       </button>
                     </div>
