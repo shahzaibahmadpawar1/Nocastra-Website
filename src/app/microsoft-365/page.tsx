@@ -167,9 +167,7 @@ export default function Microsoft365Page() {
         </section>
 
         {m365Services.map((service, index) => (
-          <section key={service.id} id={service.id} style={{ 
-            padding: "80px 5%", 
-            backgroundColor: index % 2 === 0 ? "white" : "#f8fafc",
+          <section key={service.id} id={service.id} className="responsive-section-padding" style={{ backgroundColor: index % 2 === 0 ? "white" : "#f8fafc",
             borderBottom: "1px solid var(--border-color)"
           }}>
             <div className="responsive-grid-service" style={{ 
