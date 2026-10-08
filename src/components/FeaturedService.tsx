@@ -25,6 +25,14 @@ const intuneServices = [
   "Ongoing Managed Support",
 ];
 
+const specialistServices = [
+  "Microsoft Intune Tenant Setup",
+  "Microsoft Intune Tenant-to-Tenant Migration",
+  "Microsoft 365 Tenant Migration",
+  "Microsoft Intune Health Check",
+  "Microsoft Intune Optimisation"
+];
+
 const containerVariants = {
   hidden: {},
   show: {
@@ -70,7 +78,7 @@ export default function FeaturedService() {
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, margin: "-100px" }}
         >
           {/* Left Column: Details */}
           <motion.div className={styles.leftCol} variants={itemVariants}>
@@ -100,6 +108,16 @@ export default function FeaturedService() {
                 <li key={index} className={styles.intuneItem}>
                   <ShieldCheck size={18} className={styles.iconCheck} />
                   <span>{service}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className={styles.listHeader} style={{ marginTop: "30px" }}>Specialist Services:</div>
+            <ul className={styles.intuneList}>
+              {specialistServices.map((service, index) => (
+                <li key={index} className={styles.intuneItem}>
+                  <ShieldCheck size={18} className={styles.iconCheck} style={{ color: "var(--secondary)" }} />
+                  <span style={{ fontWeight: 600 }}>{service}</span>
                 </li>
               ))}
             </ul>

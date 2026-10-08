@@ -23,7 +23,7 @@ export default function FinalCTA() {
           className={styles.card}
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8 }}
         >
           {/* Subtle radial glowing blobs inside dark card */}

@@ -6,6 +6,8 @@ import Counter from "@/src/components/Counter";
 import ScrollRevealText from "@/src/components/ScrollRevealText";
 import ParticlesBanner from "@/src/components/ParticlesBanner";
 import { ShieldCheck, Check, Users, Award, ArrowRight } from "lucide-react";
+import AnimatedSection from "@/src/components/AnimatedSection";
+
 
 export const metadata: Metadata = {
   title: "Cloud Services - Nocastra IT Management",
@@ -103,6 +105,7 @@ export default function CloudPage() {
           position: "relative",
           overflow: "hidden"
         }}>
+<AnimatedSection>
           <ParticlesBanner />
           <div style={{ maxWidth: "1200px", margin: "0 auto", position: "relative", zIndex: 1 }}>
             <div style={{ 
@@ -128,12 +131,14 @@ export default function CloudPage() {
               Secure, scalable, and highly available cloud infrastructure solutions tailored to your enterprise requirements.
             </p>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {cloudServices.map((service, index) => (
           <section key={service.id} id={service.id} className="responsive-section-padding" style={{ backgroundColor: index % 2 === 0 ? "white" : "#f8fafc",
             borderBottom: "1px solid var(--border-color)"
           }}>
+<AnimatedSection>
             <div className="responsive-grid-service" style={{ 
               maxWidth: "1200px", 
               margin: "0 auto"
@@ -261,7 +266,8 @@ export default function CloudPage() {
               </div>
 
             </div>
-          </section>
+          </AnimatedSection>
+</section>
         ))}
 
         {/* CTA Banner Section */}
@@ -269,6 +275,7 @@ export default function CloudPage() {
           padding: "60px 5% 100px", 
           backgroundColor: "#f8fafc" 
         }}>
+<AnimatedSection>
           <div style={{ 
             maxWidth: "1200px", 
             margin: "0 auto", 
@@ -286,7 +293,8 @@ export default function CloudPage() {
               Get Free Consultation <ArrowRight size={18} style={{ marginLeft: "8px" }} />
             </Link>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
       </main>
       <Footer />

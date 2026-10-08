@@ -3,6 +3,8 @@ import Link from "next/link";
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
 import IntuneEnquiryCTA from "@/src/components/IntuneEnquiryCTA";
+import AnimatedSection from "@/src/components/AnimatedSection";
+
 import { 
   ArrowRight, CheckCircle2, ShieldCheck, Award, Briefcase, 
   Settings, Users, ServerCog, Lock, Laptop, CheckSquare, 
@@ -160,6 +162,7 @@ export default function WindowsAutopilotPage() {
           position: "relative", 
           overflow: "hidden" 
         }}>
+<AnimatedSection>
           <div style={{
             position: "absolute",
             top: "-20%",
@@ -256,10 +259,12 @@ export default function WindowsAutopilotPage() {
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 2. WHAT IS WINDOWS AUTOPILOT? */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1000px", margin: "0 auto", textAlign: "center" }}>
             <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "32px", letterSpacing: "-0.5px" }}>
               What is Windows Autopilot?
@@ -281,10 +286,12 @@ export default function WindowsAutopilotPage() {
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 3. WHY BUSINESSES CHOOSE AUTOPILOT (BUSINESS OUTCOMES) */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -311,10 +318,12 @@ export default function WindowsAutopilotPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 4. THE WINDOWS AUTOPILOT OOBE */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "flex-start" }}>
             <div>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "24px", lineHeight: "1.2" }}>
@@ -367,10 +376,12 @@ export default function WindowsAutopilotPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 5. VISUAL JOURNEY: FROM BOX TO BUSINESS-READY */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#0f172a", color: "white" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "white", marginBottom: "20px" }}>
@@ -460,10 +471,12 @@ export default function WindowsAutopilotPage() {
             `}} />
             
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 6. WHAT WE CONFIGURE */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -500,10 +513,12 @@ export default function WindowsAutopilotPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 7. SUPPORTED DEPLOYMENT SCENARIOS */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -528,10 +543,12 @@ export default function WindowsAutopilotPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 8. OUR AUTOPILOT DEPLOYMENT PROCESS */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -558,10 +575,12 @@ export default function WindowsAutopilotPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 9. WHY CHOOSE NOCASTRA */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff", borderTop: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -585,7 +604,8 @@ export default function WindowsAutopilotPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 10. FAQs */}
         <script
@@ -594,6 +614,7 @@ export default function WindowsAutopilotPage() {
         />
         
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "800px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "24px" }}>
@@ -617,7 +638,8 @@ export default function WindowsAutopilotPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 11. FINAL CTA (USING EXTRACTED COMPONENT) */}
         <IntuneEnquiryCTA 

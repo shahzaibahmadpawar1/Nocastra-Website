@@ -4,6 +4,8 @@ import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
 import ParticlesBanner from "@/src/components/ParticlesBanner";
 import { ArrowRight, Smartphone, Terminal } from "lucide-react";
+import AnimatedSection from "@/src/components/AnimatedSection";
+
 
 export const metadata: Metadata = {
   title: "Case Studies - Nocastra",
@@ -53,6 +55,7 @@ export default function CaseStudiesPage() {
           position: "relative",
           overflow: "hidden"
         }}>
+<AnimatedSection>
           <ParticlesBanner />
           <div style={{ maxWidth: "1200px", margin: "0 auto", position: "relative", zIndex: 1 }}>
             <div style={{ 
@@ -78,10 +81,12 @@ export default function CaseStudiesPage() {
               Explore how Nocastra empowers organizations through intelligent infrastructure and high-performance web development.
             </p>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* Demo Case Studies Section */}
         <section style={{ padding: "80px 5%" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             
             <div style={{ 
@@ -179,7 +184,8 @@ export default function CaseStudiesPage() {
             </div>
             
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
       </main>
       <Footer />

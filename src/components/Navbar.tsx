@@ -3,12 +3,35 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import styles from "./Navbar.module.css";
+
+const intuneLinks = [
+  { name: "Microsoft Intune Consulting", path: "/microsoft-intune/consulting" },
+  { name: "Microsoft Intune Deployment", path: "/microsoft-intune/deployment" },
+  { name: "Windows Autopilot", path: "/windows-autopilot" },
+  { name: "Microsoft Intune Migration", path: "/microsoft-intune/migration" },
+  { name: "Microsoft Intune Managed Services", path: "/microsoft-intune/managed-services" },
+  { name: "Microsoft Intune Support", path: "/microsoft-intune/support" },
+  { name: "Endpoint Security with Microsoft Intune", path: "/microsoft-intune/endpoint-security" },
+];
+
+const microsoft365Links = [
+  { name: "Microsoft Teams", path: "/microsoft-teams" },
+  { name: "Exchange Online", path: "/microsoft-exchange-online" },
+  { name: "SharePoint Online", path: "/sharepoint-online" },
+  { name: "OneDrive", path: "/microsoft-onedrive" },
+  { name: "Microsoft Entra ID", path: "/microsoft-entra-id" },
+  { name: "Microsoft Defender", path: "/microsoft-defender" },
+  { name: "Windows Autopilot", path: "/windows-autopilot" },
+  { name: "Endpoint Security", path: "/microsoft-intune/endpoint-security" },
+  { name: "Tenant-to-Tenant Migration", path: "/microsoft-intune/migration" },
+];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -26,17 +49,24 @@ export default function Navbar() {
   // Close drawer on path change
   useEffect(() => {
     setIsMenuOpen(false);
+    setOpenMobileDropdown(null);
   }, [pathname]);
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Microsoft Intune", path: "/microsoft-intune" },
-    { name: "Microsoft 365", path: "/microsoft-365" },
+    {
+      name: "Microsoft Intune",
+      path: "/microsoft-intune",
+      children: intuneLinks,
+    },
+    {
+      name: "Microsoft 365",
+      path: "/microsoft-365",
+      children: microsoft365Links,
+    },
     { name: "Cloud", path: "/cloud" },
     { name: "Web Development", path: "/web-development" },
     { name: "Case Studies", path: "/case-studies" },
-    { name: "Contact", path: "/contact" },
+    { name: "About", path: "/about" },
   ];
 
   return (
@@ -52,11 +82,31 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className={styles.navLinks}>
-          {navItems.map((item) => (
-            <Link key={item.path} href={item.path} className={styles.navLink}>
-              {item.name}
-            </Link>
-          ))}
+          {navItems.map((item) =>
+            item.children ? (
+              <div key={item.path} className={styles.navItemWithDropdown}>
+                <Link href={item.path} className={styles.navLink}>
+                  {item.name}
+                  <ChevronDown size={14} className={styles.chevron} aria-hidden />
+                </Link>
+                <div className={styles.dropdownList}>
+                  {item.children.map((child) => (
+                    <Link
+                      key={`${item.path}-${child.path}-${child.name}`}
+                      href={child.path}
+                      className={styles.dropdownListItem}
+                    >
+                      {child.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link key={item.path} href={item.path} className={styles.navLink}>
+                {item.name}
+              </Link>
+            )
+          )}
         </div>
 
         <div className={styles.actions}>
@@ -78,11 +128,57 @@ export default function Navbar() {
 
         {/* Mobile Menu Drawer */}
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ""}`}>
-          {navItems.map((item) => (
-            <Link key={item.path} href={item.path} className={styles.mobileLink}>
-              {item.name}
-            </Link>
-          ))}
+          {navItems.map((item) =>
+            item.children ? (
+              <div key={item.path}>
+                <button
+                  type="button"
+                  className={styles.mobileLink}
+                  onClick={() =>
+                    setOpenMobileDropdown(
+                      openMobileDropdown === item.path ? null : item.path
+                    )
+                  }
+                  aria-expanded={openMobileDropdown === item.path}
+                  style={{
+                    width: "100%",
+                    background: "none",
+                    border: "none",
+                    textAlign: "left",
+                    cursor: "pointer",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  {item.name}
+                  <ChevronDown
+                    size={16}
+                    style={{
+                      transform: openMobileDropdown === item.path ? "rotate(180deg)" : "none",
+                      transition: "transform 0.2s ease",
+                    }}
+                  />
+                </button>
+                {openMobileDropdown === item.path && (
+                  <div style={{ paddingLeft: "12px", display: "flex", flexDirection: "column", gap: "4px" }}>
+                    {item.children.map((child) => (
+                      <Link
+                        key={`${item.path}-${child.path}-${child.name}`}
+                        href={child.path}
+                        className={styles.mobileLink}
+                        style={{ fontWeight: 600, fontSize: "0.88rem" }}
+                      >
+                        {child.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link key={item.path} href={item.path} className={styles.mobileLink}>
+                {item.name}
+              </Link>
+            )
+          )}
           <Link
             href="/contact"
             className={styles.ctaBtn}

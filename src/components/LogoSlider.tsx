@@ -9,7 +9,7 @@ const marqueeVariants: Variants = {
       x: {
         repeat: Infinity,
         repeatType: "loop",
-        duration: 22,
+        duration: 88,
         ease: "linear",
       },
     },
@@ -17,7 +17,7 @@ const marqueeVariants: Variants = {
 };
 
 const renderLogos = () => (
-  <>
+  <div style={{ display: "flex", gap: "96px", alignItems: "center", paddingRight: "96px" }}>
     {/* 1. Codegic */}
     <div style={{ display: "flex", alignItems: "center", gap: "8px", userSelect: "none" }}>
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -80,7 +80,7 @@ const renderLogos = () => (
         <span style={{ fontSize: "0.55rem", fontWeight: 700, color: "#64748b", letterSpacing: "0.5px", textTransform: "uppercase" }}>Metals (Pvt) Ltd.</span>
       </div>
     </div>
-  </>
+  </div>
 );
 
 export default function LogoSlider() {
@@ -90,12 +90,12 @@ export default function LogoSlider() {
         overflow: "hidden", 
         width: "100%", 
         backgroundColor: "#ffffff", 
-        borderTop: "1px solid var(--border-color)", 
-        borderBottom: "1px solid var(--border-color)",
-        padding: "36px 0",
+        padding: "48px 0",
         display: "flex",
         alignItems: "center",
-        position: "relative"
+        position: "relative",
+        maskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+        WebkitMaskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)"
       }}
     >
       <motion.div 
@@ -103,16 +103,24 @@ export default function LogoSlider() {
         animate="animate"
         style={{ 
           display: "flex", 
-          gap: "96px", 
           alignItems: "center",
-          whiteSpace: "nowrap",
-          width: "max-content",
-          paddingLeft: "48px"
+          width: "max-content"
         }}
       >
-        {renderLogos()}
-        {renderLogos()}
-        {renderLogos()}
+        {/* First Half */}
+        <div style={{ display: "flex", alignItems: "center" }}>
+          {renderLogos()}
+          {renderLogos()}
+          {renderLogos()}
+          {renderLogos()}
+        </div>
+        {/* Second Half (Exact Duplicate) */}
+        <div style={{ display: "flex", alignItems: "center" }}>
+          {renderLogos()}
+          {renderLogos()}
+          {renderLogos()}
+          {renderLogos()}
+        </div>
       </motion.div>
     </div>
   );

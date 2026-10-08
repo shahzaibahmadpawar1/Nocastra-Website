@@ -3,6 +3,8 @@ import Link from "next/link";
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
 import IntuneEnquiryCTA from "@/src/components/IntuneEnquiryCTA";
+import AnimatedSection from "@/src/components/AnimatedSection";
+
 import { 
   ArrowRight, CheckCircle2, ShieldCheck, Award, Briefcase, 
   Settings, Users, ServerCog, Lock, Laptop, CheckSquare, 
@@ -147,6 +149,7 @@ export default function MicrosoftIntuneDeploymentPage() {
           position: "relative", 
           overflow: "hidden" 
         }}>
+<AnimatedSection>
           <div style={{
             position: "absolute",
             top: "-20%",
@@ -243,10 +246,12 @@ export default function MicrosoftIntuneDeploymentPage() {
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 2. WHY DEPLOYMENT MATTERS */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1000px", margin: "0 auto", textAlign: "center" }}>
             <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "32px", letterSpacing: "-0.5px" }}>
               Why a Successful Microsoft Intune Deployment Matters
@@ -268,10 +273,12 @@ export default function MicrosoftIntuneDeploymentPage() {
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 3. WHAT'S INCLUDED (8 CARDS) */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -281,6 +288,7 @@ export default function MicrosoftIntuneDeploymentPage() {
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "30px" }}>
               {[
+                { icon: Network, title: "Microsoft Intune Tenant Setup", desc: "We build your Microsoft Intune environment from the ground up, configuring tenant settings, device enrolment, security policies, compliance rules, application deployment and integrations with Microsoft Entra ID and Microsoft 365.", link: "/contact", cta: "Learn More" },
                 { icon: ServerCog, title: "Tenant Configuration", desc: "Configure Microsoft Intune to align with your organisational structure, licensing and endpoint management requirements." },
                 { icon: Smartphone, title: "Device Enrolment", desc: "Enable secure enrolment for Windows, macOS, Android and iOS devices while simplifying the onboarding experience for end users." },
                 { icon: Shield, title: "Security Policies", desc: "Implement compliance policies, device restrictions, encryption requirements and Conditional Access integrations to protect your organisation." },
@@ -295,15 +303,22 @@ export default function MicrosoftIntuneDeploymentPage() {
                     <service.icon size={24} color="#10b981" />
                   </div>
                   <h3 style={{ fontSize: "1.2rem", fontWeight: 800, color: "var(--text-primary)", marginBottom: "12px" }}>{service.title}</h3>
-                  <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: "1.6" }}>{service.desc}</p>
+                  <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: "1.6", flexGrow: 1, marginBottom: service.cta ? "24px" : "0" }}>{service.desc}</p>
+                  {service.cta && service.link && (
+                    <Link href={service.link} style={{ color: "#10b981", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: "6px", fontSize: "0.95rem" }}>
+                      {service.cta} <ArrowRight size={16} />
+                    </Link>
+                  )}
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 4. WINDOWS AUTOPILOT DEPLOYMENT */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#0f172a", color: "white" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: "60px", alignItems: "center" }}>
             <div>
               <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "rgba(255,255,255,0.1)", color: "#38bdf8", padding: "8px 16px", borderRadius: "30px", fontWeight: 700, fontSize: "0.9rem", marginBottom: "24px" }}>
@@ -339,10 +354,12 @@ export default function MicrosoftIntuneDeploymentPage() {
                </ul>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 5. APPLICATION & POLICY CONFIGURATION */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -372,10 +389,12 @@ export default function MicrosoftIntuneDeploymentPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 6. OUR DEPLOYMENT METHODOLOGY */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -404,10 +423,12 @@ export default function MicrosoftIntuneDeploymentPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 7. DEPLOYMENT SCENARIOS */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -435,10 +456,12 @@ export default function MicrosoftIntuneDeploymentPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 8. DEPLOYMENT DELIVERABLES (Strategic Addition) */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1000px", margin: "0 auto", backgroundColor: "white", borderRadius: "24px", border: "1px solid var(--border-color)", padding: "60px", boxShadow: "0 20px 40px rgba(0,0,0,0.02)" }}>
             <div style={{ textAlign: "center", marginBottom: "40px" }}>
               <h2 style={{ fontSize: "clamp(1.8rem, 2.5vw, 2.2rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "16px" }}>
@@ -469,10 +492,12 @@ export default function MicrosoftIntuneDeploymentPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 9. WHY CHOOSE NOCASTRA */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff", borderTop: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -496,7 +521,8 @@ export default function MicrosoftIntuneDeploymentPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 10. FAQs */}
         <script
@@ -505,6 +531,7 @@ export default function MicrosoftIntuneDeploymentPage() {
         />
         
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "800px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "24px" }}>
@@ -528,7 +555,8 @@ export default function MicrosoftIntuneDeploymentPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         <style dangerouslySetInnerHTML={{__html: `
           details.faq-details > summary::-webkit-details-marker {

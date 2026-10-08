@@ -3,13 +3,16 @@ import Link from "next/link";
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
 import IntuneEnquiryCTA from "@/src/components/IntuneEnquiryCTA";
-import { 
+import {  
   ArrowRight, CheckCircle2, ShieldCheck, Award, 
   Settings, Users, Laptop, FileCheck, Search,
   Globe, ChevronDown, Check, Activity, 
   RefreshCw, Smartphone, Layers, AlertTriangle, Play,
   Lock, Key, ScanLine, AlertOctagon, Fingerprint, Network, Shield
-} from "lucide-react";
+ } from "lucide-react";
+import StatsSection from "@/src/components/StatsSection";
+import AnimatedSection from "@/src/components/AnimatedSection";
+
 
 export const metadata: Metadata = {
   title: "Endpoint Security with Microsoft Intune - Nocastra",
@@ -160,6 +163,7 @@ export default function EndpointSecurityPage() {
           position: "relative", 
           overflow: "hidden" 
         }}>
+<AnimatedSection>
           <div style={{
             position: "absolute",
             top: "-20%",
@@ -274,10 +278,12 @@ export default function EndpointSecurityPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 2. WHY ENDPOINT SECURITY MATTERS */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1000px", margin: "0 auto", textAlign: "center" }}>
             <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "32px", letterSpacing: "-0.5px" }}>
               Why Endpoint Security Matters
@@ -299,10 +305,12 @@ export default function EndpointSecurityPage() {
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 3. HOW MICROSOFT INTUNE PROTECTS YOUR BUSINESS (8 CARDS) */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -331,10 +339,12 @@ export default function EndpointSecurityPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 4. OUR ENDPOINT SECURITY SERVICES (6 CARDS) */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -361,10 +371,12 @@ export default function EndpointSecurityPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 5. THE MICROSOFT SECURITY ECOSYSTEM */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1000px", margin: "0 auto", textAlign: "center" }}>
             <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "32px", letterSpacing: "-0.5px" }}>
               Built on the Microsoft Security Ecosystem
@@ -415,10 +427,12 @@ export default function EndpointSecurityPage() {
               </p>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 6. SECURITY BUILT ON ZERO TRUST PRINCIPLES (Strategic Addition) */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#0f172a", color: "white" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "rgba(16,185,129,0.15)", color: "#34d399", padding: "8px 16px", borderRadius: "30px", fontWeight: 700, fontSize: "0.9rem", marginBottom: "20px" }}>
@@ -458,10 +472,12 @@ export default function EndpointSecurityPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 7. OUR ENDPOINT SECURITY APPROACH */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -489,10 +505,12 @@ export default function EndpointSecurityPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 8. COMMON SECURITY CHALLENGES WE SOLVE */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "50px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -526,10 +544,12 @@ export default function EndpointSecurityPage() {
               </table>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 9. WHY CHOOSE NOCASTRA */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -552,7 +572,8 @@ export default function EndpointSecurityPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 10. FAQs */}
         <script
@@ -561,6 +582,7 @@ export default function EndpointSecurityPage() {
         />
         
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "800px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "24px" }}>
@@ -584,7 +606,8 @@ export default function EndpointSecurityPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 11. FINAL CTA (USING EXTRACTED COMPONENT) */}
         <IntuneEnquiryCTA 

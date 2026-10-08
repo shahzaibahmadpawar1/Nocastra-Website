@@ -3,14 +3,17 @@ import Link from "next/link";
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
 import IntuneEnquiryCTA from "@/src/components/IntuneEnquiryCTA";
-import { 
+import {  
   ArrowRight, CheckCircle2, ShieldCheck, Award, 
   Settings, Users, Laptop, FileCheck, Search,
   Globe, ChevronDown, Check, Briefcase, Activity, 
   RefreshCw, CloudCog, Headphones, BarChart, HardDrive, 
   Layers, MessageSquare, AlertTriangle, Play, Shield, LifeBuoy,
   Smartphone, Handshake as HandshakeIcon
-} from "lucide-react";
+ } from "lucide-react";
+import StatsSection from "@/src/components/StatsSection";
+import AnimatedSection from "@/src/components/AnimatedSection";
+
 
 export const metadata: Metadata = {
   title: "Microsoft Intune Support Services - Nocastra",
@@ -161,6 +164,7 @@ export default function MicrosoftIntuneSupportPage() {
           position: "relative", 
           overflow: "hidden" 
         }}>
+<AnimatedSection>
           <div style={{
             position: "absolute",
             top: "-20%",
@@ -251,34 +255,25 @@ export default function MicrosoftIntuneSupportPage() {
             </div>
 
             {/* Hero Trust Strip */}
-            <div style={{ 
-              display: "flex", 
-              flexWrap: "wrap", 
-              gap: "32px", 
-              justifyContent: "space-between",
-              backgroundColor: "rgba(255,255,255,0.03)", 
-              border: "1px solid rgba(255,255,255,0.1)", 
-              padding: "32px 40px",
-              borderRadius: "16px",
-              backdropFilter: "blur(10px)"
-            }}>
-              {[
-                { label: "Real Human Support", icon: Users },
-                { label: "Microsoft Intune Specialists", icon: Award },
-                { label: "15+ Years of IT Experience", icon: ShieldCheck },
-                { label: "Remote & On-Site Assistance", icon: Globe }
-              ].map((highlight, idx) => (
-                <div key={idx} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                  <highlight.icon size={22} color="#38bdf8" />
-                  <span style={{ fontSize: "1.05rem", fontWeight: 700, color: "white" }}>{highlight.label}</span>
-                </div>
-              ))}
+            <div style={{ marginTop: "40px" }}>
+              <StatsSection
+                variant="A"
+                theme="dark"
+                stats={[
+                  { label: "Real Human Support", icon: Users },
+                  { label: "Microsoft Intune Specialists", icon: Award },
+                  { label: "15+ Years of IT Experience", icon: ShieldCheck },
+                  { label: "Remote & On-Site Assistance", icon: Globe }
+                ]}
+              />
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 2. WHEN YOU NEED SUPPORT */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1000px", margin: "0 auto", textAlign: "center" }}>
             <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "32px", letterSpacing: "-0.5px" }}>
               When You Need Microsoft Intune Support
@@ -300,10 +295,12 @@ export default function MicrosoftIntuneSupportPage() {
               </p>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 3. WHAT WE CAN HELP WITH (8 CARDS) */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -335,10 +332,12 @@ export default function MicrosoftIntuneSupportPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 4. HUMAN SUPPORT FROM REAL SPECIALISTS */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "60px", alignItems: "center" }}>
             
             <div style={{ backgroundColor: "#f8fafc", padding: "50px 40px", borderRadius: "20px", border: "1px solid var(--border-color)", textAlign: "center" }}>
@@ -365,10 +364,12 @@ export default function MicrosoftIntuneSupportPage() {
             </div>
             
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 5. SUPPORT THAT'S HUMAN BY DESIGN (Strategic Addition) */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#0f172a", color: "white" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "rgba(14,165,233,0.15)", color: "#38bdf8", padding: "8px 16px", borderRadius: "30px", fontWeight: 700, fontSize: "0.9rem", marginBottom: "20px" }}>
@@ -404,10 +405,12 @@ export default function MicrosoftIntuneSupportPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 6. OUR SUPPORT PROCESS */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderBottom: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -450,10 +453,12 @@ export default function MicrosoftIntuneSupportPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 7. SUPPORT PLANS */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -496,10 +501,12 @@ export default function MicrosoftIntuneSupportPage() {
 
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 8. WHY CHOOSE NOCASTRA */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -523,7 +530,8 @@ export default function MicrosoftIntuneSupportPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 9. FAQs */}
         <script
@@ -532,6 +540,7 @@ export default function MicrosoftIntuneSupportPage() {
         />
         
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "800px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "24px" }}>
@@ -555,7 +564,8 @@ export default function MicrosoftIntuneSupportPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 10. FINAL CTA (USING EXTRACTED COMPONENT) */}
         <IntuneEnquiryCTA 

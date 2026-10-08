@@ -50,7 +50,7 @@ export default function Industries() {
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, margin: "-100px" }}
         >
           {industries.map((industry, index) => {
             const Icon = industry.icon;

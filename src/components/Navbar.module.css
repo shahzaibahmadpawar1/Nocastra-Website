@@ -189,7 +189,8 @@
   position: absolute;
   top: 85px;
   left: 0;
-  width: 180px;
+  width: 300px;
+  min-width: 280px;
   background: white;
   border-radius: 12px;
   box-shadow: var(--shadow-xl);
@@ -201,6 +202,7 @@
   visibility: hidden;
   transition: var(--transition-fast);
   z-index: 1000;
+  overflow: hidden;
 }
 
 .scrolled .dropdownList {
@@ -222,6 +224,8 @@
   font-size: 0.92rem;
   font-weight: 600;
   color: var(--text-secondary);
+  white-space: nowrap;
+  display: block;
 }
 
 .dropdownListItem:hover {

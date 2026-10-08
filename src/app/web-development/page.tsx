@@ -120,24 +120,6 @@ const webDevServices = [
     accentColor: "#ec4899",
     gifPath: "/gifs/Online world (1).gif",
     id: "graphic-design"
-  },
-  {
-    title: "Nocastra Send Platform",
-    category: "SaaS Systems",
-    intro: "Deploy customized cloud transit portals. We implement secure encrypted file-sharing hubs, messaging tunnels, and direct notification endpoints.",
-    features: [
-      "Custom File Sharing Encryption",
-      "Transit Tunnel Access Tokens",
-      "Automated Message Expiry Cycles",
-      "Granular Sender Control Rules",
-      "API Trigger Event Integration"
-    ],
-    metric: "End-to-End Encrypted",
-    metricLabel: "Secure data transit system",
-    ctaText: "Setup Portal Instance",
-    accentColor: "#f97316",
-    gifPath: "/gifs/Mobile Marketing.gif",
-    id: "nocastra-send"
   }
 ];
 

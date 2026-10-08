@@ -1,6 +1,10 @@
 const nextConfig = {
   output: 'export',
-  trailingSlash: true
+  //basePath: '/testing',
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+  }
 };
 
 module.exports = nextConfig;

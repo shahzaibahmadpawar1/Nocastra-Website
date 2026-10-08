@@ -4,6 +4,8 @@ import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
 import ParticlesBanner from "@/src/components/ParticlesBanner";
 import { Check, ShieldCheck, Users, Award, BookOpen, Clock } from "lucide-react";
+import AnimatedSection from "@/src/components/AnimatedSection";
+
 
 export const metadata: Metadata = {
   title: "About Us - Nocastra",
@@ -24,6 +26,7 @@ export default function AboutPage() {
           position: "relative",
           overflow: "hidden"
         }}>
+<AnimatedSection>
           <ParticlesBanner />
           <div style={{ maxWidth: "1200px", margin: "0 auto", position: "relative", zIndex: 1 }}>
             <div style={{ 
@@ -49,10 +52,12 @@ export default function AboutPage() {
               Simplifying corporate IT management and delivering audit-grade cybersecurity solutions since 2011.
             </p>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* Content Details */}
         <section style={{ padding: "80px 5%" }}>
+<AnimatedSection>
           <div className="responsive-grid-about" style={{ 
             maxWidth: "1200px", 
             margin: "0 auto"
@@ -150,7 +155,8 @@ export default function AboutPage() {
             </div>
 
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
       </main>
       <Footer />

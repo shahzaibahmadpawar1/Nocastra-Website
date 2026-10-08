@@ -4,6 +4,8 @@ import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
 import ParticlesBanner from "@/src/components/ParticlesBanner";
 import { Users, Server, Shield, Terminal, Settings } from "lucide-react";
+import AnimatedSection from "@/src/components/AnimatedSection";
+
 
 export const metadata: Metadata = {
   title: "Meet the Team - Nocastra",
@@ -59,6 +61,7 @@ export default function MeetTheTeamPage() {
           position: "relative",
           overflow: "hidden"
         }}>
+<AnimatedSection>
           <ParticlesBanner />
           <div style={{ maxWidth: "1200px", margin: "0 auto", position: "relative", zIndex: 1 }}>
             <div style={{
@@ -84,10 +87,12 @@ export default function MeetTheTeamPage() {
               Our certified cloud consultants, cybersecurity practitioners, and full-stack developers deliver secure solutions.
             </p>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* Team Grid */}
         <section style={{ padding: "80px 5%" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{
               display: "grid",
@@ -136,7 +141,8 @@ export default function MeetTheTeamPage() {
               })}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
       </main>
       <Footer />

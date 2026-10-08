@@ -53,7 +53,7 @@ export default function Integration() {
           className={styles.textContent}
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8 }}
         >
           <span className={styles.subtitle}>Our Process</span>
@@ -98,7 +98,7 @@ export default function Integration() {
           className={styles.diagramWrapper}
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <svg className={styles.svgDiagram} viewBox="0 0 500 400">

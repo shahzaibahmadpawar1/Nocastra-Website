@@ -36,7 +36,7 @@ export default function Hosting() {
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8 }}
         >
           <img src="/images/logos/SpeedHostLogo.png" alt="SpeedHost Logo" className={styles.speedHostLogo} />
@@ -63,7 +63,7 @@ export default function Hosting() {
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, margin: "-100px" }}
         >
           {hostingServices.map((service, index) => {
             const Icon = service.icon;

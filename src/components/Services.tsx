@@ -72,7 +72,7 @@ export default function Services() {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: false, margin: "-100px" }}
       >
         {/* Card 1: IT Management */}
         <motion.div className={styles.card} variants={cardVariants}>

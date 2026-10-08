@@ -1,96 +1,68 @@
-"use client";
-
 import Link from "next/link";
-import { Mail, Phone, Clock } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
-  const handleNavClick = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offsetTop = element.offsetTop - 70;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
-        
-        {/* About column */}
-        <div className={styles.col}>
-          <Link href="/" className={styles.logo} style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}>
-            <img 
-              src="/images/logos/nocastraLogo.png" 
-              alt="Nocastra" 
-              style={{ height: "30px", width: "auto", display: "block" }} 
+      <div className={styles.topRow}>
+        <div className={styles.brand}>
+          <Link href="/" className={styles.logo}>
+            <img
+              src="/images/logos/nocastraLogo.png"
+              alt="Nocastra"
+              style={{ height: "26px", width: "auto", display: "block" }}
             />
           </Link>
-          <p className={styles.aboutText}>
-            Humanized IT Support by a Team of Experts offering specialized custom development, cloud integrations, server hardening, and vulnerability audits.
-          </p>
+          <p className={styles.aboutText}>Humanized IT Support by a Team of Experts.</p>
         </div>
+        <div className={styles.contactInfo}>
+          <a href="mailto:info@nocastra.com" className={styles.contactLine}>
+            <Mail size={14} className={styles.contactIcon} />
+            info@nocastra.com
+          </a>
+          <a href="tel:+923214682968" className={styles.contactLine}>
+            <Phone size={14} className={styles.contactIcon} />
+            +92 321 4682968
+          </a>
+        </div>
+      </div>
 
-        {/* Services column */}
-        <div className={styles.col}>
-          <h3>IT Services</h3>
+      <div className={styles.linkGroups}>
+        <div className={styles.group}>
+          <h3>Microsoft Intune</h3>
           <div className={styles.links}>
-            <a href="#services" onClick={(e) => { e.preventDefault(); handleNavClick("services"); }} className={styles.link}>
-              Vulnerability Assessment
-            </a>
-            <a href="#services" onClick={(e) => { e.preventDefault(); handleNavClick("services"); }} className={styles.link}>
-              Server Hardening
-            </a>
-            <a href="#services" onClick={(e) => { e.preventDefault(); handleNavClick("services"); }} className={styles.link}>
-              Web Development
-            </a>
-            <a href="#services" onClick={(e) => { e.preventDefault(); handleNavClick("services"); }} className={styles.link}>
-              IT Assessment & Auditing
-            </a>
+            <Link href="/microsoft-intune" className={styles.link}>Overview</Link>
+            <Link href="/microsoft-intune/consulting" className={styles.link}>Consulting</Link>
+            <Link href="/microsoft-intune/deployment" className={styles.link}>Deployment</Link>
+            <Link href="/windows-autopilot" className={styles.link}>Windows Autopilot</Link>
+            <Link href="/microsoft-intune/managed-services" className={styles.link}>Managed Services</Link>
+            <Link href="/microsoft-intune/endpoint-security" className={styles.link}>Endpoint Security</Link>
           </div>
         </div>
 
-        {/* Navigation column */}
-        <div className={styles.col}>
-          <h3>Quick Links</h3>
+        <div className={styles.group}>
+          <h3>Microsoft 365</h3>
           <div className={styles.links}>
-            <a href="#home" onClick={(e) => { e.preventDefault(); handleNavClick("home"); }} className={styles.link}>
-              Home
-            </a>
-            <a href="#services" onClick={(e) => { e.preventDefault(); handleNavClick("services"); }} className={styles.link}>
-              Services
-            </a>
-            <a href="#process" onClick={(e) => { e.preventDefault(); handleNavClick("process"); }} className={styles.link}>
-              Our Process
-            </a>
-            <a href="#portfolio" onClick={(e) => { e.preventDefault(); handleNavClick("portfolio"); }} className={styles.link}>
-              Portfolio
-            </a>
+            <Link href="/microsoft-365" className={styles.link}>Overview</Link>
+            <Link href="/microsoft-teams" className={styles.link}>Microsoft Teams</Link>
+            <Link href="/microsoft-exchange-online" className={styles.link}>Exchange Online</Link>
+            <Link href="/sharepoint-online" className={styles.link}>SharePoint Online</Link>
+            <Link href="/microsoft-entra-id" className={styles.link}>Microsoft Entra ID</Link>
+            <Link href="/microsoft-defender" className={styles.link}>Microsoft Defender</Link>
           </div>
         </div>
 
-        {/* Contact column */}
-        <div className={styles.col}>
-          <h3>Contact Details</h3>
-          <div className={styles.contactInfo}>
-            <div className={styles.contactLine}>
-              <Mail size={16} className={styles.contactIcon} />
-              <a href="mailto:info@nocastra.com">info@nocastra.com</a>
-            </div>
-            <div className={styles.contactLine}>
-              <Phone size={16} className={styles.contactIcon} />
-              <a href="tel:+923214682968">+92 321 4682968</a>
-            </div>
-            <div className={styles.contactLine}>
-              <Clock size={16} className={styles.contactIcon} />
-              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
-            </div>
+        <div className={styles.group}>
+          <h3>Company</h3>
+          <div className={styles.links}>
+            <Link href="/about" className={styles.link}>About</Link>
+            <Link href="/cloud" className={styles.link}>Cloud</Link>
+            <Link href="/web-development" className={styles.link}>Web Development</Link>
+            <Link href="/case-studies" className={styles.link}>Case Studies</Link>
+            <Link href="/contact" className={styles.link}>Contact</Link>
           </div>
         </div>
-
       </div>
 
       <div className={styles.bottomBar}>
@@ -98,12 +70,8 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Nocastra. All rights reserved.
         </div>
         <div className={styles.bottomLinks}>
-          <a href="#home" onClick={(e) => { e.preventDefault(); handleNavClick("home"); }} className={styles.bottomLink}>
-            Terms & Conditions
-          </a>
-          <a href="#home" onClick={(e) => { e.preventDefault(); handleNavClick("home"); }} className={styles.bottomLink}>
-            Privacy Policy
-          </a>
+          <span className={styles.bottomLink}>Terms &amp; Conditions</span>
+          <span className={styles.bottomLink}>Privacy Policy</span>
         </div>
       </div>
     </footer>

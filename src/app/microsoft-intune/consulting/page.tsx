@@ -3,12 +3,15 @@ import Link from "next/link";
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
 import IntuneEnquiryCTA from "@/src/components/IntuneEnquiryCTA";
-import { 
+import {  
   ArrowRight, CheckCircle2, ShieldCheck, Award, Briefcase, 
   Search, FileCheck, ServerCog, Lock, Users, Compass, 
   ChevronDown, Layers, Puzzle, Check, Laptop, Shield, Network, ArrowRightLeft,
   Clock, CheckSquare, Handshake
-} from "lucide-react";
+ } from "lucide-react";
+import StatsSection from "@/src/components/StatsSection";
+import AnimatedSection from "@/src/components/AnimatedSection";
+
 
 export const metadata: Metadata = {
   title: "Microsoft Intune Consulting Services - Nocastra",
@@ -135,6 +138,7 @@ export default function MicrosoftIntuneConsultingPage() {
           position: "relative", 
           overflow: "hidden" 
         }}>
+<AnimatedSection>
           {/* Background Graphic */}
           <div style={{
             position: "absolute",
@@ -232,10 +236,12 @@ export default function MicrosoftIntuneConsultingPage() {
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 2. WHY BUSINESSES NEED CONSULTING */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center" }}>
             <div>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "32px", letterSpacing: "-0.5px" }}>
@@ -281,10 +287,12 @@ export default function MicrosoftIntuneConsultingPage() {
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 3. OUR CONSULTING SERVICES (GRID) */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -302,7 +310,7 @@ export default function MicrosoftIntuneConsultingPage() {
                 { icon: Shield, title: "Security & Compliance Planning", desc: "Design compliance policies, Conditional Access strategies and endpoint security baselines before implementation begins.", link: "/microsoft-intune/endpoint-security", cta: "Explore Security Planning" },
                 { icon: Network, title: "Microsoft 365 Integration Planning", desc: "Plan seamless integration between Microsoft Intune, Microsoft 365, Microsoft Entra ID, Microsoft Defender and Azure.", link: "/microsoft-365", cta: "Learn More" },
                 { icon: ArrowRightLeft, title: "Migration Planning", desc: "Create a structured migration strategy from SCCM, Workspace ONE or other legacy endpoint management solutions.", link: "/microsoft-intune/migration", cta: "Explore Migration" },
-                { icon: FileCheck, title: "Licensing & Architecture Guidance", desc: "Receive expert advice on Microsoft licensing, tenant design, device enrolment methods and deployment best practices.", link: "/microsoft-intune/consulting", cta: "Learn More" },
+                { icon: FileCheck, title: "Tenant Architecture & Design", desc: "Design a secure Microsoft Intune tenant that aligns with your organisational structure, identity strategy, security requirements and future growth plans. We help you make the right architectural decisions before implementation begins.", link: "/microsoft-intune/consulting", cta: "Learn More" },
               ].map((service, idx) => (
                 <div key={idx} style={{ backgroundColor: "white", padding: "40px", borderRadius: "20px", border: "1px solid var(--border-color)", display: "flex", flexDirection: "column", height: "100%", transition: "transform 0.2s ease, box-shadow 0.2s ease" }}>
                   <div style={{ backgroundColor: "#f0f9ff", width: "60px", height: "60px", borderRadius: "16px", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "24px" }}>
@@ -317,10 +325,12 @@ export default function MicrosoftIntuneConsultingPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 4. WHAT'S INCLUDED */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#0f172a", color: "white" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: "60px", alignItems: "center" }}>
             <div>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, marginBottom: "24px", color: "white" }}>
@@ -354,10 +364,12 @@ export default function MicrosoftIntuneConsultingPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 5. READINESS ASSESSMENT */}
         <section id="assessment" className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", backgroundColor: "#fef2f2", color: "#ef4444", padding: "8px 16px", borderRadius: "30px", fontWeight: 700, fontSize: "0.9rem", marginBottom: "20px" }}>
@@ -396,10 +408,12 @@ export default function MicrosoftIntuneConsultingPage() {
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 6. OUR CONSULTING PROCESS */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -427,10 +441,12 @@ export default function MicrosoftIntuneConsultingPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 7. WHY CHOOSE NOCASTRA */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -458,7 +474,8 @@ export default function MicrosoftIntuneConsultingPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 8. FAQs */}
         <script
@@ -467,6 +484,7 @@ export default function MicrosoftIntuneConsultingPage() {
         />
         
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "800px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "24px" }}>
@@ -490,7 +508,8 @@ export default function MicrosoftIntuneConsultingPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         <style dangerouslySetInnerHTML={{__html: `
           details.faq-details > summary::-webkit-details-marker {

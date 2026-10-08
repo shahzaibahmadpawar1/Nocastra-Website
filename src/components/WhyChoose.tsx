@@ -39,7 +39,7 @@ export default function WhyChoose() {
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8 }}
         >
           <span className={styles.badge}>Why Choose Us</span>
@@ -70,7 +70,7 @@ export default function WhyChoose() {
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, margin: "-100px" }}
         >
           {points.map((point, index) => (
             <motion.div 

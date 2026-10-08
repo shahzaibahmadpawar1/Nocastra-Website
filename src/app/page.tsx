@@ -13,6 +13,8 @@ import Hosting from "@/src/components/Hosting";
 import FinalCTA from "@/src/components/FinalCTA";
 import Contact from "@/src/components/Contact";
 import Footer from "@/src/components/Footer";
+import AnimatedSection from "@/src/components/AnimatedSection";
+
 
 export default function Home() {
   return (
@@ -31,6 +33,7 @@ export default function Home() {
         
         {/* Clients section */}
         <section id="clients" style={{ padding: "80px 0 0", backgroundColor: "#ffffff", borderTop: "1px solid var(--border-color)", position: "relative", zIndex: 10 }}>
+<AnimatedSection>
           <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 40px", padding: "0 5%" }}>
             <span style={{
               display: "inline-block",
@@ -52,7 +55,8 @@ export default function Home() {
             </p>
           </div>
           <LogoSlider />
-        </section>
+        </AnimatedSection>
+</section>
         
         <Hosting />
         <FinalCTA />

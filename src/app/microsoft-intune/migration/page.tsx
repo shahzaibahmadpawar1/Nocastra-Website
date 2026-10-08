@@ -3,6 +3,8 @@ import Link from "next/link";
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
 import IntuneEnquiryCTA from "@/src/components/IntuneEnquiryCTA";
+import AnimatedSection from "@/src/components/AnimatedSection";
+
 import { 
   ArrowRight, CheckCircle2, ShieldCheck, Award, 
   Settings, Users, ServerCog, Lock, Laptop, CheckSquare, 
@@ -148,6 +150,7 @@ export default function MicrosoftIntuneMigrationPage() {
           position: "relative", 
           overflow: "hidden" 
         }}>
+<AnimatedSection>
           <div style={{
             position: "absolute",
             top: "-20%",
@@ -244,10 +247,12 @@ export default function MicrosoftIntuneMigrationPage() {
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 2. WHY BUSINESSES MIGRATE TO INTUNE */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1000px", margin: "0 auto", textAlign: "center" }}>
             <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "32px", letterSpacing: "-0.5px" }}>
               Why Businesses Are Migrating to Microsoft Intune
@@ -266,10 +271,12 @@ export default function MicrosoftIntuneMigrationPage() {
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 3. MIGRATION CHALLENGES WE SOLVE */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -322,10 +329,12 @@ export default function MicrosoftIntuneMigrationPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 4. VISUAL MIGRATION JOURNEY */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#0f172a", color: "white" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "white", marginBottom: "20px" }}>
@@ -416,10 +425,12 @@ export default function MicrosoftIntuneMigrationPage() {
             `}} />
             
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 5. SUPPORTED MIGRATION PLATFORMS */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -442,10 +453,46 @@ export default function MicrosoftIntuneMigrationPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
+
+        {/* 5.5. TENANT-TO-TENANT MIGRATION */}
+        <section className="responsive-section-padding" style={{ backgroundColor: "#f0f9ff", borderTop: "1px solid var(--border-color)" }}>
+<AnimatedSection>
+          <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+            <div style={{ textAlign: "center", marginBottom: "60px", maxWidth: "800px", margin: "0 auto 60px" }}>
+              <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
+                Microsoft Tenant-to-Tenant Migration
+              </h2>
+              <p style={{ fontSize: "1.1rem", color: "var(--text-secondary)", lineHeight: "1.7" }}>
+                Nocastra doesn't just migrate devices—we help organisations move their entire Microsoft environment between tenants. Whether due to mergers, acquisitions, or restructuring, we ensure a seamless transition of your devices, identities, and workloads.
+              </p>
+            </div>
+            
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px" }}>
+              {[
+                { icon: ArrowRightLeft, title: "Microsoft Intune Tenant-to-Tenant Migration", desc: "Move enrolled devices, compliance policies, configuration profiles and endpoint management to a new Microsoft tenant using a structured migration approach." },
+                { icon: CloudLightning, title: "Microsoft 365 Tenant Migration", desc: "Migrate users, identities, Microsoft 365 workloads and services while maintaining business continuity." },
+                { icon: Users, title: "Microsoft Entra ID Migration", desc: "Support identity migration, user provisioning, authentication and access policies within the new tenant." },
+                { icon: Laptop, title: "Autopilot Profile Migration", desc: "Move Windows Autopilot devices and deployment profiles to the destination tenant as part of your migration strategy." },
+                { icon: ShieldCheck, title: "Policy & Configuration Migration", desc: "Recreate and optimise compliance policies, configuration profiles and security baselines in the new tenant. Not every policy can be exported automatically, so careful planning and validation are essential." }
+              ].map((service, idx) => (
+                <div key={idx} style={{ padding: "30px", border: "1px solid var(--border-color)", borderRadius: "16px", backgroundColor: "#ffffff", boxShadow: "0 4px 6px rgba(0,0,0,0.02)", display: "flex", flexDirection: "column" }}>
+                  <div style={{ backgroundColor: "#e0f2fe", width: "50px", height: "50px", borderRadius: "12px", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "20px" }}>
+                    <service.icon size={24} color="#0284c7" />
+                  </div>
+                  <h3 style={{ fontSize: "1.2rem", fontWeight: 800, color: "var(--text-primary)", marginBottom: "12px" }}>{service.title}</h3>
+                  <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: "1.6", flexGrow: 1 }}>{service.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
+</section>
 
         {/* 6. WHAT'S INCLUDED IN MIGRATION */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -474,10 +521,12 @@ export default function MicrosoftIntuneMigrationPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 7. OUR MIGRATION PROCESS */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -506,10 +555,12 @@ export default function MicrosoftIntuneMigrationPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 8. MIGRATION WITHOUT BUSINESS DISRUPTION */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#0f172a", color: "white" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1000px", margin: "0 auto", textAlign: "center" }}>
             <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, marginBottom: "24px" }}>
               Migration Without Business Disruption
@@ -526,10 +577,12 @@ export default function MicrosoftIntuneMigrationPage() {
               </p>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 9. WHY CHOOSE NOCASTRA */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "20px" }}>
@@ -553,7 +606,8 @@ export default function MicrosoftIntuneMigrationPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 10. FAQs */}
         <script
@@ -562,6 +616,7 @@ export default function MicrosoftIntuneMigrationPage() {
         />
         
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc", borderTop: "1px solid var(--border-color)", borderBottom: "1px solid var(--border-color)" }}>
+<AnimatedSection>
           <div style={{ maxWidth: "800px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <h2 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", fontWeight: 800, color: "var(--text-primary)", marginBottom: "24px" }}>
@@ -585,7 +640,8 @@ export default function MicrosoftIntuneMigrationPage() {
               ))}
             </div>
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* 11. FINAL CTA (USING EXTRACTED COMPONENT) */}
         <IntuneEnquiryCTA 

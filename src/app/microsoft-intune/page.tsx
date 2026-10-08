@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
 import IntuneEnquiryCTA from "@/src/components/IntuneEnquiryCTA";
-import { ArrowRight, ShieldCheck, Award, Users, Smartphone, Headphones, RefreshCw, Settings, Handshake, Clock, Globe, ShieldAlert, UserPlus, Search, Briefcase, MonitorSmartphone, Rocket, FileCheck, TrendingUp, XCircle, CheckCircle2, Compass, ServerCog, MonitorCheck, ArrowRightLeft, Cog, LifeBuoy, Lock, ClipboardList, Layers, Puzzle, Flame, Store, Truck, Landmark, HeartPulse, Building, Factory, GraduationCap, Cloud, Key, Shield, Server, Mail, MessageSquare, ChevronDown } from "lucide-react";
+import StatsSection from "@/src/components/StatsSection";
+import { ArrowRight, ShieldCheck, Award, Users, Smartphone, Headphones, RefreshCw, Settings, Handshake, Clock, Globe, ShieldAlert, UserPlus, Search, Briefcase, MonitorSmartphone, Rocket, FileCheck, TrendingUp, XCircle, CheckCircle2, Compass, ServerCog, MonitorCheck, ArrowRightLeft, Cog, LifeBuoy, Lock, ClipboardList, Layers, Puzzle, Flame, Store, Truck, Landmark, HeartPulse, Building, Factory, GraduationCap, Cloud, Key, Shield, Server, Mail, MessageSquare, ChevronDown, Network, CloudLightning, Activity } from "lucide-react";
+import AnimatedSection from "@/src/components/AnimatedSection";
+
 
 export const metadata: Metadata = {
   title: "Microsoft Intune Services - Nocastra",
@@ -189,6 +193,7 @@ export default function MicrosoftIntunePage() {
           position: "relative",
           overflow: "hidden"
         }}>
+<AnimatedSection>
           {/* Subtle Background Accent */}
           <div style={{
             position: "absolute",
@@ -285,9 +290,11 @@ export default function MicrosoftIntunePage() {
                 justifyContent: "center",
                 alignItems: "center"
               }}>
-                <img 
+                <Image 
                   src="/images/intune-hero.png" 
-                  alt="Microsoft Intune Centralized Management" 
+                  alt="Microsoft Intune Centralized Management"
+                  width={500}
+                  height={500}
                   style={{
                     width: "100%",
                     maxWidth: "500px",
@@ -296,99 +303,34 @@ export default function MicrosoftIntunePage() {
                     boxShadow: "0 20px 40px rgba(0,0,0,0.08)",
                     border: "1px solid rgba(0,0,0,0.05)"
                   }}
+                  priority
                 />
               </div>
             </div>
 
             {/* Bottom Highlights Row */}
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              gap: "24px",
-              marginTop: "20px"
-            }}>
-              
-              <div style={{
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "16px",
-                padding: "24px",
-                backgroundColor: "#f8fafc",
-                borderRadius: "16px",
-                border: "1px solid var(--border-color)"
-              }}>
-                <div style={{ color: "#0284c7", backgroundColor: "#e0f2fe", padding: "12px", borderRadius: "12px" }}>
-                  <Award size={24} />
-                </div>
-                <div>
-                  <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "4px" }}>15+ Years</h3>
-                  <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: "1.4" }}>of IT Experience</p>
-                </div>
-              </div>
-
-              <div style={{
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "16px",
-                padding: "24px",
-                backgroundColor: "#f8fafc",
-                borderRadius: "16px",
-                border: "1px solid var(--border-color)"
-              }}>
-                <div style={{ color: "#0284c7", backgroundColor: "#e0f2fe", padding: "12px", borderRadius: "12px" }}>
-                  <Users size={24} />
-                </div>
-                <div>
-                  <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "4px" }}>150+</h3>
-                  <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: "1.4" }}>Happy Customers</p>
-                </div>
-              </div>
-
-              <div style={{
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "16px",
-                padding: "24px",
-                backgroundColor: "#f8fafc",
-                borderRadius: "16px",
-                border: "1px solid var(--border-color)"
-              }}>
-                <div style={{ color: "#0284c7", backgroundColor: "#e0f2fe", padding: "12px", borderRadius: "12px" }}>
-                  <Smartphone size={24} />
-                </div>
-                <div>
-                  <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "4px" }}>Hundreds</h3>
-                  <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: "1.4" }}>of Devices Successfully Managed</p>
-                </div>
-              </div>
-
-              <div style={{
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "16px",
-                padding: "24px",
-                backgroundColor: "#f8fafc",
-                borderRadius: "16px",
-                border: "1px solid var(--border-color)"
-              }}>
-                <div style={{ color: "#0284c7", backgroundColor: "#e0f2fe", padding: "12px", borderRadius: "12px" }}>
-                  <ShieldCheck size={24} />
-                </div>
-                <div>
-                  <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "4px" }}>Remote & On-Site</h3>
-                  <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: "1.4" }}>Microsoft Intune Support</p>
-                </div>
-              </div>
-
+            <div style={{ marginTop: "20px" }}>
+              <StatsSection
+                variant="A"
+                theme="light"
+                stats={[
+                  { icon: Award, value: "15+ Years", label: "of IT Experience" },
+                  { icon: Users, value: "150+", label: "Happy Customers" },
+                  { icon: Smartphone, value: "Hundreds", label: "of Devices Successfully Managed" },
+                  { icon: ShieldCheck, value: "Remote & On-Site", label: "Microsoft Intune Support" }
+                ]}
+              />
             </div>
 
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* Trust Section */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff",
           borderBottom: "1px solid var(--border-color)"
         }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             
             {/* Header and Intro */}
@@ -412,33 +354,17 @@ export default function MicrosoftIntunePage() {
             </div>
 
             {/* First Row (Statistics) */}
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-              gap: "30px",
-              marginBottom: "60px"
-            }}>
-              <div style={{ textAlign: "center", padding: "30px", backgroundColor: "#f8fafc", borderRadius: "20px", border: "1px solid var(--border-color)" }}>
-                <div style={{ fontSize: "3rem", fontWeight: 800, color: "#0284c7", marginBottom: "8px", fontFamily: "var(--font-headings)" }}>15+</div>
-                <div style={{ fontSize: "1.05rem", fontWeight: 600, color: "var(--text-primary)" }}>Years of Experience</div>
-              </div>
-              
-              <div style={{ textAlign: "center", padding: "30px", backgroundColor: "#f8fafc", borderRadius: "20px", border: "1px solid var(--border-color)" }}>
-                <div style={{ fontSize: "3rem", fontWeight: 800, color: "#0284c7", marginBottom: "8px", fontFamily: "var(--font-headings)" }}>150+</div>
-                <div style={{ fontSize: "1.05rem", fontWeight: 600, color: "var(--text-primary)" }}>Happy Customers</div>
-              </div>
-
-              <div style={{ textAlign: "center", padding: "30px", backgroundColor: "#f8fafc", borderRadius: "20px", border: "1px solid var(--border-color)" }}>
-                <div style={{ fontSize: "3rem", fontWeight: 800, color: "#0284c7", marginBottom: "8px", fontFamily: "var(--font-headings)" }}>100s</div>
-                <div style={{ fontSize: "1.05rem", fontWeight: 600, color: "var(--text-primary)" }}>Devices Managed</div>
-              </div>
-
-              <div style={{ textAlign: "center", padding: "30px", backgroundColor: "#f8fafc", borderRadius: "20px", border: "1px solid var(--border-color)" }}>
-                <div style={{ display: "flex", justifyContent: "center", marginBottom: "16px", color: "#0284c7" }}>
-                  <ShieldCheck size={48} strokeWidth={1.5} />
-                </div>
-                <div style={{ fontSize: "1.05rem", fontWeight: 600, color: "var(--text-primary)" }}>Security-First Approach</div>
-              </div>
+            <div style={{ marginBottom: "60px" }}>
+              <StatsSection
+                variant="B"
+                theme="light"
+                stats={[
+                  { value: "15+", label: "Years of Experience" },
+                  { value: "150+", label: "Happy Customers" },
+                  { value: "100s", label: "Devices Managed" },
+                  { icon: ShieldCheck, label: "Security-First Approach" }
+                ]}
+              />
             </div>
 
             {/* Second Row (Trust Features) */}
@@ -489,12 +415,14 @@ export default function MicrosoftIntunePage() {
             </div>
 
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* Pain Points Section */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc",
           borderBottom: "1px solid var(--border-color)"
         }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             
             {/* Header and Intro */}
@@ -568,12 +496,14 @@ export default function MicrosoftIntunePage() {
             </div>
 
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* Why Microsoft Intune Section */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff",
           borderBottom: "1px solid var(--border-color)"
         }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             
             {/* Header and Intro */}
@@ -616,9 +546,11 @@ export default function MicrosoftIntunePage() {
               boxShadow: "0 10px 30px rgba(0,0,0,0.03)"
             }}>
               <h3 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text-primary)", textAlign: "center" }}>The Modern Management Ecosystem</h3>
-              <img 
+              <Image 
                 src="/images/intune-ecosystem.png" 
                 alt="Microsoft Intune Central Hub Infographic"
+                width={900}
+                height={500}
                 style={{
                   width: "100%",
                   height: "auto",
@@ -738,12 +670,14 @@ export default function MicrosoftIntunePage() {
             </div>
 
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* Nocastra's Microsoft Intune Services Section */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc",
           borderBottom: "1px solid var(--border-color)"
         }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
             
             {/* Header and Intro */}
@@ -936,12 +870,14 @@ export default function MicrosoftIntunePage() {
             </div>
 
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* Implementation Process Section */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff",
           borderBottom: "1px solid var(--border-color)"
         }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
             
             {/* Header and Intro */}
@@ -1083,11 +1019,13 @@ export default function MicrosoftIntunePage() {
             </div>
 
           </div>
-        </section>
+        </AnimatedSection>
+</section>
         {/* Success Stories Section */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc",
           borderBottom: "1px solid var(--border-color)"
         }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             
             {/* Header and Intro */}
@@ -1191,12 +1129,14 @@ export default function MicrosoftIntunePage() {
             </div>
 
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* Why Choose Nocastra Section */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc",
           borderBottom: "1px solid var(--border-color)"
         }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             
             {/* Header and Intro */}
@@ -1232,9 +1172,11 @@ export default function MicrosoftIntunePage() {
               
               {/* Left Column - Image */}
               <div style={{ position: "sticky", top: "120px" }}>
-                <img 
+                <Image 
                   src="/images/intune-team.png" 
                   alt="Nocastra IT Team Collaboration"
+                  width={600}
+                  height={600}
                   style={{
                     width: "100%",
                     height: "auto",
@@ -1353,12 +1295,14 @@ export default function MicrosoftIntunePage() {
             </div>
 
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* Industries Section */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff",
           borderBottom: "1px solid var(--border-color)"
         }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             
             {/* Header and Intro */}
@@ -1499,12 +1443,14 @@ export default function MicrosoftIntunePage() {
             </div>
 
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* Technologies We Integrate With Section */}
         <section className="responsive-section-padding" style={{ backgroundColor: "#ffffff",
           borderBottom: "1px solid var(--border-color)"
         }}>
+<AnimatedSection>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             
             {/* Header and Intro */}
@@ -1543,7 +1489,7 @@ export default function MicrosoftIntunePage() {
                 { 
                   icon: Key, 
                   title: "Microsoft Entra ID", 
-                  desc: "Strengthen identity and access management through secure authentication, Conditional Access policies and seamless user provisioning integrated with Microsoft Intune.",
+                  desc: "We design and migrate Microsoft Entra ID environments, ensuring users, identities and access policies integrate seamlessly with Microsoft Intune. Strengthen access management through secure authentication and Conditional Access.",
                   link: "/microsoft-entra-id",
                   cta: "Learn About Microsoft Entra ID"
                 },
@@ -1707,7 +1653,8 @@ export default function MicrosoftIntunePage() {
             </div>
 
           </div>
-        </section>
+        </AnimatedSection>
+</section>
 
         {/* FAQ Section with Schema */}
         <script
@@ -1718,6 +1665,7 @@ export default function MicrosoftIntunePage() {
         <section className="responsive-section-padding" style={{ backgroundColor: "#f8fafc",
           borderBottom: "1px solid var(--border-color)"
         }}>
+<AnimatedSection>
           <div style={{ maxWidth: "800px", margin: "0 auto" }}>
             
             {/* Header */}
@@ -1799,7 +1747,8 @@ export default function MicrosoftIntunePage() {
             </div>
 
           </div>
-        </section>
+        </AnimatedSection>
+</section>
         
         <style dangerouslySetInnerHTML={{__html: `
           details.faq-details > summary::-webkit-details-marker {
